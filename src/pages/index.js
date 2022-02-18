@@ -6,6 +6,22 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 
 const IndexPage = () => {
+
+  const [offset, setOffset] = React.useState(0);
+
+  React.useEffect(() => {
+    const onScroll = () => setOffset(window.scrollY);
+    // clean up code
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  let arrowBtnStyle = "nav-arrow-icon";
+  if (offset > 50) {
+    arrowBtnStyle = "nav-arrow-icon nav-arrow-icon-bottom";
+  }
+
   return (
     <main className="page-ctn">
       <title>AppMoon</title>
@@ -38,7 +54,7 @@ const IndexPage = () => {
           />
         </a>
       </div>
-      <div className="nav-arrow-icon">
+      <div className={arrowBtnStyle}>
         <StaticImage
           src="../images/arrow-right.png"
           alt="Right arrow"
@@ -66,19 +82,19 @@ const IndexPage = () => {
             className="offer-gradient"
             placeholder="none"
           />
-          <div className="glassy-ctn">
+          <div className="glassy-ctn g1">
             <h3>Aplikacje webowe</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem impusm cos tam dalej</p>
           </div>
-          <div className="glassy-ctn">
+          <div className="glassy-ctn g2">
             <h3>Systemy embedded</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
           </div>
-          <div className="glassy-ctn">
+          <div className="glassy-ctn g3">
             <h3>Aplikacje mobilne</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
           </div>
-          <div className="glassy-ctn">
+          <div className="glassy-ctn g4">
             <h3>R&D</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem</p>
           </div>
