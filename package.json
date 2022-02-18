@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^4.5.3",
+    "@fontsource/vt323": "^4.5.2",
     "gatsby": "^4.7.2",
     "gatsby-plugin-google-analytics": "^4.7.0",
     "gatsby-plugin-image": "^2.7.0",
