@@ -2,6 +2,7 @@ import * as React from "react"
 import './style.css'
 import { StaticImage } from 'gatsby-plugin-image';
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 
 
@@ -18,8 +19,10 @@ const IndexPage = () => {
   }, []);
 
   let arrowBtnStyle = "nav-arrow-icon";
+  let arrowScrollFunction = () => scrollTo('#offer')
   if (offset > 50) {
     arrowBtnStyle = "nav-arrow-icon nav-arrow-icon-bottom";
+    arrowScrollFunction = () => scrollTo('#start')
   }
 
   return (
@@ -42,26 +45,34 @@ const IndexPage = () => {
         loading="eager"
       />
 
-      <div className="ctn landing-ctn">
-        <h1>Chwitliwy tekścior cool & super</h1>
-        <p>Masz wizję i potrzbujesz kogoś kto Ci w tym pomoże? Napisz do nas a my prześlemy Ci wycene za darmo! 🎉</p>
-        <a href="#contact" className="call-to-action_btn">
-          <p>Napisz do nas</p>
-          <StaticImage
-            src="../images/arrow-right.png"
-            alt="Right arrow"
-            className="arrow-icon"
-          />
-        </a>
+      <div style={{overflow: 'hidden', width: '100%', zIndex: 3}}>
+        <div id="start" className="ctn landing-ctn">
+          <h1>Chwitliwy tekścior cool & super</h1>
+          <p>Masz wizję i potrzbujesz kogoś kto Ci w tym pomoże? Napisz do nas a my prześlemy Ci wycene za darmo! 🎉</p>
+          <a className="call-to-action_btn">
+            <p>Napisz do nas</p>
+            <StaticImage
+              src="../images/arrow-right.png"
+              alt="Right arrow"
+              className="arrow-icon"
+              placeholder="none"
+              loading="eager"
+            />
+          </a>
+        </div>
       </div>
-      <div className={arrowBtnStyle}>
+
+      <button onClick={arrowScrollFunction} className={arrowBtnStyle}>
         <StaticImage
           src="../images/arrow-right.png"
           alt="Right arrow"
+          placeholder="none"
+          loading="eager"
         />
-      </div>
+      </button>
 
-      <div className="ctn offer-ctn">
+      <div id="offer" className="overflow-ctn">
+      <div className="ctn offer-ctn" >
         <div className="offer-text-ctn">
           <p className="section-subtitle">NASZA OFERTA</p>
           <h2>Działamy w wielu dziedzinach</h2>
@@ -100,7 +111,9 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+      </div>
 
+      <div className="overflow-ctn">
       <div className="ctn about-us_ctn">
         <h1>Troche o nas</h1>
         <div className="members-ctn">
@@ -168,6 +181,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </main>
   )
