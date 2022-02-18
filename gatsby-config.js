@@ -17,15 +17,5 @@ module.exports = {
       },
       __key: "images"
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `montserrat`,
-          `jetbrains mono`,
-        ],
-        display: 'swap'
-      }
-    }
   ]
 };
