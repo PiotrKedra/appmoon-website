@@ -61,7 +61,7 @@ const ContactForm = () => {
         style={{margin: '0.6rem 0'}}
       />
       <input
-        type="email"
+        type="text"
         placeholder="Email*"
         value={email}
         onChange={handleChangeEmail}
