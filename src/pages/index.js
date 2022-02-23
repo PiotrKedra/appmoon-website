@@ -66,7 +66,7 @@ const IndexPage = () => {
       <div style={{overflow: 'hidden', width: '100%', zIndex: 3}}>
         <div id={START_SECTION} className="ctn landing-ctn">
           <h1>Chwitliwy tekścior cool & super</h1>
-          <p>Masz wizję i potrzbujesz kogoś kto Ci w tym pomoże? Napisz do nas a my prześlemy Ci wycene za darmo! 😎</p>
+          <p>Masz pomysł na produkt lub aplikację, ale nie wiesz jak się za to zabrać? Potrzebujesz zlecieć jakieś prace? Napisz do nas, prześlemy Ci wycenę za darmo! 😎</p>
           <button onClick={() => scrollTo(`#${CONTACT_SECTION}`)} className="call-to-action_btn">
             <p>Napisz do nas</p>
             <BsArrowRight className="arrow-icon" />
@@ -181,7 +181,7 @@ const IndexPage = () => {
               className="member-avatar"
             />
             <h3>PIOTR KĘDRA</h3>
-            <p>Since 2018 I am actively involved in developing applications that help automate processes  </p>
+            <p>In IT since 2016. With a degree in Computer Science. Working experience in backend development. Currently more into mobile/web technologies. </p>
             <div className="member-socials">
               <a href="#">
                 <FaLinkedinIn size="1.8rem"/>
