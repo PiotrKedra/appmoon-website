@@ -1,0 +1,56 @@
+.card
+  z-index: 2
+  transform-style: preserve-3d
+  perspective: 600px
+  transition: .3s
+
+
+
+.card-front
+  position: absolute
+  top: 0
+  left: 0
+  backface-visibility: hidden
+  transform: rotateX(0deg)
+  transition: .3s
+  border-radius: 25px
+  border: 1px solid var(--gray)
+  background-color: var(--glassy-gray)
+  padding: 2rem
+
+.card-back
+  position: absolute
+  top: 0
+  left: 0
+  border-radius: 25px
+  border: 1px solid var(--gray)
+  background-color: var(--glassy-gray)
+  padding: 2rem
+  color: var(--glassy-text)
+  backface-visibility: hidden
+  transform: rotateX(180deg)
+  transition: .3s
+  text-align: center
+  font-size: 13px !important
+  h2
+    margin: 60% auto 35% auto
+    font-size: 26px
+    span
+      font-size: 20px
+  a
+    height: 20px
+    width: 20px
+    padding: 5px 5px
+    border-radius: 4px
+    line-height: 20px
+    &:hover
+      color: #000000
+      background-color: #fff
+
+.more-btn
+  color: var(--blue)
+  cursor: pointer
+  transition: all 0.2s ease-in-out
+  &:hover
+    text-decoration: underline
+

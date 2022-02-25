@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: JetBrains Mono, Roboto, Montserrat, sans-serif;
+    background-color: var(--black);
 }
 
 .page-ctn {
@@ -105,7 +106,7 @@ h1,h2,h3,h4,h5,h6,p,a {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 52px;
     letter-spacing: -2px;
     font-weight: 700;
     text-align: center;
@@ -342,12 +343,42 @@ h2 {
     transition: all 0.1s ease-in-out;
 }
 
-.glassy-ctn:hover {
-    transform: scale(1.01) translateY(5px) translateX(5px);
-}
-
 .glassy-ctn:hover h3,
 .glassy-ctn:hover p {
+    transition: all 0.1s ease-in-out;
+    color: var(--white);
+}
+
+.card {
+    height: 340px;
+}
+
+.card > div {
+    height: 340px;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        height: 360px;
+    }
+
+    .card > div {
+        height: 360px;
+    }
+}
+
+@media (max-width: 880px) {
+    .card {
+        height: 390px;
+    }
+
+    .card > div {
+        height: unset;
+    }
+}
+
+.card:hover h3,
+.card:hover p {
     transition: all 0.1s ease-in-out;
     color: var(--white);
 }
@@ -368,14 +399,16 @@ h2 {
     transform: translateY(-5px) translateX(-5px);
 }
 
-.glassy-ctn h3 {
+.glassy-ctn h3,
+.card h3 {
     font-size: 22px;
     margin-bottom: 1.5rem;
     color: var(--glassy-text);
 }
 
-.glassy-ctn p {
-    font-size: 16px;
+.glassy-ctn p,
+.card p{
+    font-size: 14px;
     color: var(--glassy-text);
     font-weight: 100;
 }
@@ -413,6 +446,7 @@ h2 {
         grid-gap: 1rem;
         position: relative;
     }
+
 }
 
 @media (max-width: 560px) {
@@ -451,16 +485,16 @@ h2 {
         margin-left: 1rem;
     }
 
-    .glassy-ctn {
+    .glassy-ctn, .card {
         padding: 1.5rem;
     }
 
-    .glassy-ctn h3 {
+    .glassy-ctn h3, .card h3 {
         font-size: 20px;
         margin-bottom: 1rem;
     }
 
-    .glassy-ctn p {
+    .glassy-ctn p, .card p {
         font-size: 14px;
     }
 
@@ -480,6 +514,8 @@ h2 {
 }
 
 .members-ctn {
+    width: 100%;
+    height: 100%;
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -596,7 +632,7 @@ h2 {
 
 .small-contact-gradient {
     position: absolute !important;
-    top: 150px;
+    top: 120px;
     left: -50px;
     z-index: 0;
     width: 250px;

@@ -55,7 +55,7 @@ const ContactForm = () => {
     >
       <input
         type="text"
-        placeholder="Twoje imię"
+        placeholder="Your name"
         value={name}
         onChange={handleChangeName}
         style={{margin: '0.6rem 0'}}
@@ -69,21 +69,21 @@ const ContactForm = () => {
         style={isEmailValid ? null : {borderColor: '#FF605C'}}
       />
       <p className="error-msg" style={isEmailValid ? null : {opacity: 1}}>
-        Podany email jest nie właściwy 🤔
+        This email is incorrect 🤔
       </p>
       <textarea
         name="message"
         rows="4"
-        placeholder="Wiadomość*"
+        placeholder="Message*"
         value={message}
         onChange={handleChangeMessage}
         style={isMessageValid ? null : {borderColor: '#FF605C'}}
       />
       <p className="error-msg" style={isMessageValid ? null : {opacity: 1}}>
-        Nie chcemy dostać pustej wiadomości 😅
+        We do not want to get empty message 😅
       </p>
       <button type="submit">
-        Wyślij
+        Send
         <BsArrowRight style={{marginLeft: '1rem'}} size="1.8rem"/>
       </button>
     </form>
