@@ -17,6 +17,44 @@ body {
     background-color: var(--black);
 }
 
+.logo-ctn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 2.5rem;
+    height: auto;
+}
+
+.logo-icon img{
+    width: 2.5rem;
+    height: auto;
+}
+
+.logo-text {
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+@media (max-width: 560px) {
+    .logo-icon {
+        width: 2rem;
+        height: auto;
+    }
+
+    .logo-text {
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .logo-icon img{
+        width: 2rem;
+        height: auto;
+    }
+}
+
 .page-ctn {
     background-color: var(--black);
     display: flex;

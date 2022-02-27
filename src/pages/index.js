@@ -7,6 +7,8 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import ContactForm from './contact-form';
 import './card.sass'
 import FlippingCard from './card';
+import { Helmet } from 'react-helmet';
+import favicon from '../images/codenauts.png'
 
 const START_SECTION = "start"
 const OFFER_SECTION = "offer"
@@ -34,14 +36,31 @@ const IndexPage = () => {
 
   return (
     <main className="page-ctn">
-      <title>Codenauts</title>
+
+      <Helmet
+        title={'Codenauts'}
+        meta={[
+          {
+            name: `description`,
+            content: 'We are a group of enthusiasts who work in several IT fields. Solving problems is our passion.',
+          },
+          {
+            name: `author`,
+            content: 'Codenauts'
+          },
+          {
+            property: `og:image`,
+            content: favicon
+          },
+        ]}
+      />
 
       <StaticImage
         src="../images/blurred-bg.png"
         alt="blurred background"
         className="gradient main-bg-desktop"
         placeholder="none"
-        loading="eager"
+        loading="lazy"
       />
 
       <StaticImage
@@ -49,12 +68,21 @@ const IndexPage = () => {
         alt="blurred background"
         className="gradient main-bg-mobile"
         placeholder="none"
-        loading="eager"
+        loading="lazy"
       />
 
       <div className="menu-ctn">
         <div className="ctn menu-inner-ctn">
-          <h3>Codenauts</h3>
+          <div className="logo-ctn">
+            <StaticImage
+              src="../images/codenauts.png"
+              alt="Codenauts icon"
+              placeholder="none"
+              loading="eager"
+              className="logo-icon"
+            />
+            <h3 className="logo-text">Codenauts</h3>
+          </div>
           <nav className="desktop-nav">
             <button onClick={() => scrollTo(`#${START_SECTION}`)}>START</button>
             <button onClick={() => scrollTo(`#${OFFER_SECTION}`)}>OFFER</button>

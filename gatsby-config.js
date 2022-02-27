@@ -3,10 +3,11 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-      title: `appmoon`,
-    siteUrl: `https://www.yourdomain.tld`
+      title: `Codenauts`,
+    siteUrl: `https://www.codenauts.io/`
   },
   plugins: [
+
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -20,7 +21,19 @@ module.exports = {
       },
       __key: "images"
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Codenauts',
+        short_name: 'Codenauts',
+        start_url: '/',
+        background_color: '#07090D',
+        theme_color: '#137CDE',
+        display: 'standalone',
+        icon: 'src/images/codenauts.png',
+      },
+    },
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
   ]
 };
