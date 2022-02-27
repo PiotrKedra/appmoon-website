@@ -1,7 +1,6 @@
 import * as React from "react"
 import './style.css'
 import { StaticImage } from 'gatsby-plugin-image';
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -87,16 +86,16 @@ const IndexPage = () => {
         />
       </button>
 
-      <div id={OFFER_SECTION} className="overflow-ctn">
-      <div className="ctn offer-ctn" >
+      <div className="overflow-ctn">
+      <div id={OFFER_SECTION} className="ctn offer-ctn" >
         <div className="offer-text-ctn">
           <p className="section-subtitle">OUR OFFER</p>
           <h2>Check what we can do for you</h2>
           <p className="section-text">We are a group of enthusiasts who work in several IT fields. Solving problems is our passion. Check the services we offer.</p>
-          <a className="forward-btn">
+          <button onClick={() => scrollTo(`#${CONTACT_SECTION}`)} className="forward-btn">
             <p>Request a free quote</p>
             <BsArrowRight style={{marginLeft: '1rem'}} size="1.7rem"/>
-          </a>
+          </button>
         </div>
         <div className="offer-offer-ctn">
           <StaticImage
@@ -111,7 +110,7 @@ const IndexPage = () => {
           </div>
           <div className="glassy-ctn g2">
             <h3>Embedded systems</h3>
-            <p>Custom projects using microcontrollers or FPGA, PCB Prototyping, time recorders, device controllers</p>
+            <p>Custom projects using microcontrollers or FPGA, PCB Prototyping, device controllers</p>
           </div>
           <div className="glassy-ctn g3">
             <h3>Mobile apps</h3>
@@ -155,6 +154,7 @@ const IndexPage = () => {
             name={'PAWEŁ KOCWA'}
             shortText={'Experience in Python GUI apps. Currently developing apps and embedded solutions. In Codenauts I am doing embedded and R&D projects.'}
             longText={'Since 2018, I have been developing software supporting the automation of processes, among others in R&D laboratories or in positions for device certification. My apps are currently in service at the customer\'s quarters. For several months I have also been working on the development of intelligent devices, such as ZBM OSSA torque wrench. In the meantime, I obtained a Master\'s degree in Automation and Robotics AGH University. I am also planning to start PhD studies this year.'}
+            linkedin={'https://www.linkedin.com/in/pawelkocwa/'}
           />
           <FlippingCard
             img={(
@@ -166,7 +166,9 @@ const IndexPage = () => {
             )}
             name={'MIŁOSZ BLASIAK'}
             shortText={'Full Stack developer with 3 years of commercial experience, open to new challenges and supporting the team in different areas.'}
-            longText={'                Through my last three years in professional software development I have learned that beautiful code that does not provide value for the user is worthless, but also using shortcuts at the beginning often causes a lot of problems later on. I believe that keeping a balance between software quality and delivering business values is the hardest and most important task of a software developer. I focus mainly on web application, backend as well as frontend, but I am always open to new challenges and supporting the team in different areas.'}
+            longText={'Through my last three years in professional software development I have learned that beautiful code that does not provide value for the user is worthless, but also using shortcuts at the beginning often causes a lot of problems later on. I believe that keeping a balance between software quality and delivering business values is the hardest and most important task of a software developer. I focus mainly on web application, backend as well as frontend, but I am always open to new challenges and supporting the team in different areas.'}
+            linkedin={'https://www.linkedin.com/in/mi%C5%82osz-blasiak-b97613179'}
+            github={'https://github.com/mblasiak'}
           />
           <FlippingCard
             img={(
@@ -177,15 +179,17 @@ const IndexPage = () => {
               />
             )}
             name={'PIOTR KĘDRA'}
-            shortText={'Working experience in backend development. Currently more into mobile/web technologies. In TrisSolutions I am responsible for both.'}
+            shortText={'Working experience in backend development. Currently more into mobile/web technologies. In Codenauts I am responsible for both.'}
             longText={'I started my adventure with programming around 2016/2017. The first program I wrote was a game based on Icy Tower. In the meantime, I obtained a degree in Computer Science from AGH UST in Krakow. Currently, I am closing up my Master\'s degree at 2 universities Wroclaw University of Science and Technology and Technical University in Munich.  I used to work as a backend developer, but when it comes to recent years, I am more into mobile/web development.'}
+            linkedin={'https://www.linkedin.com/in/pkedra/'}
+            github={'https://github.com/PiotrKedra'}
           />
         </div>
       </div>
       </div>
 
-      <div id={CONTACT_SECTION} className="overflow-ctn over-contact-ctn">
-        <div className="ctn offer-ctn contact-ctn">
+      <div className="overflow-ctn over-contact-ctn">
+        <div id={CONTACT_SECTION} className="ctn offer-ctn contact-ctn">
           <StaticImage
             src="../images/rectangle-gradient.png"
             alt="Moon gradient"
@@ -204,7 +208,7 @@ const IndexPage = () => {
             <p className="section-subtitle">CONTACT</p>
             <h2>Interested in working with us?</h2>
             <p className="section-text">You can contact us via the form or simply by sending us mail. Don't hesitate and let us know. 😅 </p>
-            <a className="forward-btn">
+            <a className="forward-btn" href="mailto:contact@codenauts.io">
               <GoMail style={{marginRight: '1rem'}} size="1.8rem"/>
               <p>contact@codenauts.io</p>
             </a>

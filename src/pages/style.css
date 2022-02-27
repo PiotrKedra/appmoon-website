@@ -3,6 +3,7 @@
     --white: #ffffff;
     --blue: #137CDE;
     --gray: #4C4F58;
+    --light-gray: #6a6d75;
     --glassy-gray: #4C4F5830;
     --glassy-text: #ffffff95;
     --error: #FF605C;
@@ -313,7 +314,7 @@ h2 {
 
 .section-text {
     font-size: 20px;
-    color: var(--gray);
+    color: var(--light-gray);
     text-align: left;
     margin: 2rem 0;
     font-weight: 300;
@@ -325,6 +326,12 @@ h2 {
     font-size: 20px;
     font-weight: 400;
     white-space: nowrap;
+    background-color: transparent;
+    border: none;
+    font-family: JetBrains Mono, Roboto, Montserrat, sans-serif;
+    color: var(--white);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .forward-btn > div {
@@ -570,7 +577,7 @@ h2 {
 .member-right-gradient {
     position: absolute !important;
     right: -150px;
-    bottom: -200px;
+    bottom: -160px;
     z-index: 0;
     filter: blur(5px);
     -webkit-filter: blur(5px);
@@ -621,6 +628,7 @@ h2 {
     color: var(--glassy-text);
     z-index: 2;
     box-sizing: border-box;
+    position: relative;
 }
 
 .contact-gradient {
@@ -697,6 +705,11 @@ h2 {
     box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
 }
 
+.contact-form button:disabled {
+    opacity: 0.5;
+}
+
+
 .copyright {
     position: absolute;
     left: 0.5rem;
@@ -738,5 +751,20 @@ h2 {
     height: 1rem;
     color: var(--error);
     opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+.submitted-msg {
+    display: none;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    right: 2rem;
+    background-color: var(--gray);
+    opacity: 0.95;
+    padding: 1rem 1rem 1rem 2rem;
+    box-sizing: border-box;
+    border-left: 8px solid var(--blue);
+    border-radius: 1px;
     transition: all 0.1s ease-in-out;
 }
