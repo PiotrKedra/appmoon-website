@@ -36,11 +36,15 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-829KN1WC07",
-        head: false,
-      }
-    }
+        trackingIds: [
+          "G-829KN1WC07",
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ]
 };
