@@ -35,5 +35,12 @@ module.exports = {
     },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-829KN1WC07",
+        head: false,
+      }
+    }
   ]
 };

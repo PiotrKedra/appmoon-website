@@ -4,9 +4,9 @@ import { StaticImage } from 'gatsby-plugin-image';
 import { GoMail } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import ContactForm from './contact-form';
-import './card.sass'
-import FlippingCard from './card';
+import ContactForm from '../components/contact-form';
+import '../components/card.sass'
+import FlippingCard from '../components/card';
 import { Helmet } from 'react-helmet';
 import favicon from '../images/codenauts.png'
 
