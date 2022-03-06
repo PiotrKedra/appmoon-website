@@ -38,7 +38,7 @@ const IndexPage = () => {
     <main className="page-ctn">
 
       <Helmet
-        title={'Codenauts'}
+        title={'Codenauts - Custom Software Development'}
         meta={[
           {
             name: `description`,

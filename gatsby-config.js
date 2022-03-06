@@ -3,11 +3,10 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-      title: `Codenauts`,
+      title: `Codenauts - Custom Software Development`,
     siteUrl: `https://www.codenauts.io/`
   },
   plugins: [
-
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
