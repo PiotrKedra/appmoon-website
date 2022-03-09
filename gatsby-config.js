@@ -3,8 +3,9 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-      title: `Codenauts - Custom Software Development`,
-    siteUrl: `https://www.codenauts.io/`
+    title: `Custom Software & Embedded Development - Codenauts`,
+    siteUrl: `https://www.codenauts.io/`,
+    description: `We provide tailor-made IT solutions. Web applications, embedded systems, mobile apps, desktop apps. Transfer your idea to a real world solution!`
   },
   plugins: [
     "gatsby-plugin-image",

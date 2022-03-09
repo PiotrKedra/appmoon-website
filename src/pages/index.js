@@ -38,11 +38,11 @@ const IndexPage = () => {
     <main className="page-ctn">
 
       <Helmet
-        title={'Codenauts - Custom Software Development'}
+        title={'Custom Software & Embedded Development - Codenauts'}
         meta={[
           {
             name: `description`,
-            content: 'We are a group of enthusiasts who work in several IT fields. Solving problems is our passion.',
+            content: 'We provide tailor-made IT solutions. Web applications, embedded systems, mobile apps, desktop apps. Transfer your idea to a real world solution!',
           },
           {
             name: `author`,
@@ -94,7 +94,7 @@ const IndexPage = () => {
 
       <div style={{overflow: 'hidden', width: '100%', zIndex: 3}}>
         <div id={START_SECTION} className="ctn landing-ctn">
-          <h1>We provide tailor-made IT solutions</h1>
+          <h1>We provide custom <span className="xd">software & embedded</span> solutions</h1>
           <p>
             You have an idea for a product or app but don't know how to make it? Need outsourcing? Get in touch with us! 😎
           </p>
