@@ -94,7 +94,7 @@ const IndexPage = () => {
 
       <div style={{overflow: 'hidden', width: '100%', zIndex: 3}}>
         <div id={START_SECTION} className="ctn landing-ctn">
-          <h1>We provide custom <span className="xd">software & embedded</span> solutions</h1>
+          <h1>We provide custom <span className="nowrap-span">software & embedded</span> solutions</h1>
           <p>
             You have an idea for a product or app but don't know how to make it? Need outsourcing? Get in touch with us! 😎
           </p>

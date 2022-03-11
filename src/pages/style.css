@@ -9,29 +9,8 @@
     --error: #FF605C;
 }
 
-.xd {
-    display: inline-block;
-    position: relative;
+.nowrap-span {
     white-space: nowrap;
-}
-
-.xd::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    left: -10px;
-    right: -10px;
-    bottom: 10%;
-    top: 65%;
-    background-color: var(--black);
-    z-index: -1;
-    transition: all .15s ease-out;
-    border-radius: 1px;
-}
-
-.xd:hover::before {
-    bottom: 0;
-    top: 0;
 }
 
 html,
@@ -77,14 +56,6 @@ body {
     .logo-icon img{
         width: 2rem;
         height: auto;
-    }
-
-    .xd {
-        white-space: unset;
-    }
-
-    .xd::before {
-        background-color: transparent;
     }
 }
 
