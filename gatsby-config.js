@@ -16,10 +16,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        "name": "locale",
+        "path": `${__dirname}/translations/`
       },
-      __key: "images"
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -45,6 +44,16 @@ module.exports = {
           head: true,
         },
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `pl`],
+        defaultLanguage: `en`,
+        siteUrl: `https://www.codenauts.io/`,
+        redirect: false,
+      }
     },
   ]
 };

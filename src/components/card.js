@@ -1,7 +1,10 @@
 import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const FlippingCard = ({img, name, shortText, longText, linkedin, github}) => {
+  const {t} = useTranslation()
+
   const [isLongText, setIsLong] = React.useState(false);
 
   const transformFrontStyle = {transform: 'rotateX(-180deg)'}
@@ -16,7 +19,7 @@ const FlippingCard = ({img, name, shortText, longText, linkedin, github}) => {
           {shortText}
           <span >
             <button className="more-btn" onClick={() => setIsLong(true)}>
-              More...
+              {t`home.more`}
             </button>
           </span>
         </p>
@@ -38,7 +41,7 @@ const FlippingCard = ({img, name, shortText, longText, linkedin, github}) => {
           {longText}
           <span >
             <button className="more-btn" onClick={() => setIsLong(false)}>
-              Go back.
+              {t`home.go_back`}
             </button>
           </span>
         </p>

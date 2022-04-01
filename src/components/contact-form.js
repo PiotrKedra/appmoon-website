@@ -1,12 +1,17 @@
 import React from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 import emailjs from "emailjs-com"
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
-const LOADING_MSG = 'Sending..';
-const SUCCESS_MSG = 'Email sent 😃';
-const ERROR_MSG = 'Some error 😱'
+
 
 const ContactForm = () => {
+  const {t} = useTranslation()
+
+  const LOADING_MSG = t`home.sending`;
+  const SUCCESS_MSG = t`home.email_sent` + ` 😃`;
+  const ERROR_MSG = t`home.some_error` + ` 😱`
+
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [message, setMessage] = React.useState('');
@@ -97,35 +102,35 @@ const ContactForm = () => {
       >
         <input
           type="text"
-          placeholder="Your name"
+          placeholder={t`home.your_name`}
           value={name}
           onChange={handleChangeName}
           style={{margin: '0.6rem 0'}}
         />
         <input
           type="text"
-          placeholder="Email*"
+          placeholder={t`home.email`}
           value={email}
           onChange={handleChangeEmail}
           formNoValidate={true}
           style={isEmailValid ? null : {borderColor: '#FF605C'}}
         />
         <p className="error-msg" style={isEmailValid ? null : {opacity: 1}}>
-          This email is incorrect 🤔
+          {t`home.incorrect_email`} 🤔
         </p>
         <textarea
           name="message"
           rows="4"
-          placeholder="Message*"
+          placeholder={t`home.message`}
           value={message}
           onChange={handleChangeMessage}
           style={isMessageValid ? null : {borderColor: '#FF605C'}}
         />
         <p className="error-msg" style={isMessageValid ? null : {opacity: 1}}>
-          We do not want to get empty message 😅
+          {t`home.empty_message`} 😅
         </p>
         <button type="submit" disabled={submitted}>
-          Send
+          {t`home.send`}
           <BsArrowRight style={{marginLeft: '1rem'}} size="1.8rem"/>
         </button>
       </form>
