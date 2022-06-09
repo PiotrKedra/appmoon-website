@@ -1,0 +1,75 @@
+@import "../../style/colors";
+@import "../../style/values";
+
+.main-btn_ctn {
+  position: relative;
+  width: 300px;
+  height: 55px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+  .text-ctn {
+    height: 27px;
+    p {
+      padding: 0 !important;
+      margin: 0 !important;
+      font-size: 18px !important;
+      font-weight: 200 !important;
+      text-align: left;
+      font-style: normal;
+      line-height: 27px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .line {
+    height: 0.5px;
+    box-sizing: border-box;
+    width: 300px;
+    background-color: $codenauts_white;
+    z-index: $main_z_index;
+  }
+
+  .helper-ctn {
+    height: 27px;
+  }
+
+  .circle-theme {
+    position: absolute;
+    right: -27px;
+    top: 0;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 0 0 5px 2px rgba(53, 77, 202, 0.5);
+    z-index: $zero_z_index;
+    transition: all .1s ease-in-out;
+  }
+
+  .arrow {
+    position: absolute;
+    right: 1px;
+    top: 24.5px;
+    border: solid $codenauts_white;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+
+  :hover {
+
+  }
+}
+
+.main-btn_ctn:hover {
+  .circle-theme {
+    right: -32px;
+    top: -5px;
+    width: 65px;
+    height: 65px;
+  }
+}

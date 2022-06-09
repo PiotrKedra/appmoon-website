@@ -1,5 +1,5 @@
 import React from 'react';
-import '../pages/style.css'
+// import '../pages/style.css'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import {IoMenuOutline, IoCloseOutline} from 'react-icons/io5'
 import { ABOUT_SECTION, CONTACT_SECTION, OFFER_SECTION, START_SECTION } from './home-page-sections';

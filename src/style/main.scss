@@ -1,0 +1,49 @@
+@import "colors";
+@import "fonts";
+@import "values";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: $jetbrains_mono;
+  background-color: $codenauts_black;
+}
+
+.main-ctn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  h1,h2,h3,h4,h5,h6,p,a {
+    color: $codenauts_white;
+    padding: 0;
+    margin: 0;
+    font-family: $jetbrains_mono;
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 84px;
+    letter-spacing: -0.05em;
+  }
+
+  h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 63px;
+  }
+
+  .ctn {
+    max-width: $max_width;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    z-index: $main_z_index;
+    position: relative;
+  }
+}

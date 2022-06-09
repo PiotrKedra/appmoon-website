@@ -1,5 +1,5 @@
 import * as React from "react"
-import './style.css'
+// import './style.css'
 import { StaticImage } from 'gatsby-plugin-image';
 import { GoMail } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
