@@ -3,7 +3,7 @@ import './main-btn.scss'
 
 const MainBtn = ({text, onClick}) => (
   <button className="main-btn_ctn" onClick={() => {console.log('ss')}}>
-    <div className="text-ctn">
+    <div className="text-btn-ctn">
       <p>{text}</p>
     </div>
     <div className="line"/>
