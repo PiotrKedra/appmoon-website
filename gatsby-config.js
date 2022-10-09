@@ -30,7 +30,7 @@ module.exports = {
         background_color: '#07090D',
         theme_color: '#137CDE',
         display: 'standalone',
-        icon: 'src/images/codenauts.png',
+        icon: 'src/images/codenauts-favicon.png',
       },
     },
     `gatsby-plugin-smoothscroll`,

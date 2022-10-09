@@ -28,13 +28,13 @@ body {
 }
 
 .logo-icon {
-    width: 2.5rem;
-    height: auto;
+    height: 2rem;
+    width: auto;
 }
 
 .logo-icon img{
-    width: 2.5rem;
-    height: auto;
+    height: 2rem;
+    width: auto;
 }
 
 .logo-text {
@@ -44,8 +44,8 @@ body {
 
 @media (max-width: 560px) {
     .logo-icon {
-        width: 2rem;
-        height: auto;
+        height: 1.5rem;
+        width: auto;
     }
 
     .logo-text {
@@ -54,8 +54,8 @@ body {
     }
 
     .logo-icon img{
-        width: 2rem;
-        height: auto;
+        height: 1.5rem;
+        width: auto;
     }
 }
 
