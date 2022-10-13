@@ -12,6 +12,10 @@
 
   .text-btn-ctn {
     height: 27px;
+    padding-left: 0;
+    box-sizing: border-box;
+    transition: all .2s ease-in;
+
     p {
       padding: 0 !important;
       margin: 0 !important;
@@ -72,5 +76,24 @@
     top: -5px;
     width: 65px;
     height: 65px;
+  }
+
+  .text-btn-ctn {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .main-btn_ctn {
+    position: relative;
+    width: 80%;
+
+    .line {
+      height: 0.5px;
+      box-sizing: border-box;
+      width: 240px;
+      background-color: $codenauts_white;
+      z-index: $main_z_index;
+    }
   }
 }

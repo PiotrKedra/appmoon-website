@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import favicon from '../../images/codenauts.png'
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import '../../style/main.scss'
-import './style/style.scss'
+import './style/welcome-section-style.scss'
 import WelcomeSection from './components/WelcomeSection';
 
 
@@ -31,6 +31,8 @@ const Home = () => {
       />
 
       <WelcomeSection/>
+
+      <div style={{height: '100vh'}}/>
 
     </main>
   );

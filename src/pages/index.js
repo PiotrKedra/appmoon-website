@@ -79,13 +79,12 @@ const IndexPage = () => {
         <div className="ctn menu-inner-ctn">
           <div className="logo-ctn">
             <StaticImage
-              src="../images/codenauts.png"
-              alt="Codenauts icon"
+              src="../images/codenauts-logo.png"
+              alt="Codenauts logo"
               placeholder="none"
               loading="eager"
               className="logo-icon"
             />
-            <h3 className="logo-text">Codenauts</h3>
           </div>
           <nav className="desktop-nav">
             <button onClick={() => scrollTo(`#${START_SECTION}`)}>{t`home.start`}</button>
