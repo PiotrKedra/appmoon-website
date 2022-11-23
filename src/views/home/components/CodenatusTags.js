@@ -15,12 +15,12 @@ const CodenatusTags = () => {
       <p className="title-text">{t`home.we_are`} <span>{t`home.codenauts_io`}</span></p>
       <div className="tags-grid">
         {
-          TAGS.slice(0,3).map(tag => <Tag text={tag}/>)
+          TAGS.slice(0,3).map(tag => <Tag text={tag} key={tag}/>)
         }
       </div>
       <div className="tags-grid">
         {
-          TAGS.slice(3,TAGS.length).map(tag => <Tag text={tag}/>)
+          TAGS.slice(3,TAGS.length).map(tag => <Tag text={tag} key={tag}/>)
         }
       </div>
     </div>

@@ -1,10 +1,12 @@
 import * as React from "react"
 import { Helmet } from 'react-helmet';
-import favicon from '../../images/codenauts.png'
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import '../../style/main.scss'
 import './style/welcome-section-style.scss'
 import WelcomeSection from './components/WelcomeSection';
+import OfferSection from './components/offer-section';
+import MainBtn from '../../components/buttons/btn';
+import StepsSection from './components/steps-section';
 
 
 const Home = () => {
@@ -25,14 +27,19 @@ const Home = () => {
           },
           {
             property: `og:image`,
-            content: favicon
           },
         ]}
       />
 
       <WelcomeSection/>
 
-      <div style={{height: '100vh'}}/>
+      <OfferSection/>
+
+      <StepsSection/>
+
+      <div style={{height: '100vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        <MainBtn text="Contact us"/>
+      </div>
 
     </main>
   );

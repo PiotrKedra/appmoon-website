@@ -1,0 +1,94 @@
+@import "../../../style/colors";
+
+.offer-ctn {
+  display: flex;
+  gap: 4rem;
+
+  .text-ctn {
+    flex: 2;
+  }
+
+  .offer-item-up-ctn {
+    position: relative;
+    flex: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    .theme {
+      position: absolute;
+      right: -100px;
+      top: 250px;
+      height: 300px;
+      width: 300px;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      height: fit-content;
+
+      > div {
+        box-sizing: border-box;
+        background: rgba(76, 79, 88, 0.3);
+        border: 1px solid #4C4F58;
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        padding: 2rem;
+        row-gap: 2rem;
+        transition: all .15s linear;
+        cursor: pointer;
+
+        h3,p {
+          opacity: 0.85;
+          transition: all .15s linear;
+        }
+      }
+
+      > div:hover {
+        background-color: $codenauts_blue;
+
+        h3,p {
+          opacity: 1;
+        }
+
+        .secondary-btn-ctn {
+          svg {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 1088px) {
+  .offer-ctn {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 876px) {
+  .offer-ctn {
+    .offer-item-up-ctn {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .offer-ctn {
+    flex-direction: column;
+    .offer-item-up-ctn {
+      > div {
+        > div {
+          row-gap: 1rem;
+        }
+      }
+    }
+  }
+}

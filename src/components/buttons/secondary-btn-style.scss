@@ -1,12 +1,8 @@
 @import "../../style/colors";
 @import "../../style/values";
 
-.btn-ctn {
+.secondary-btn-ctn {
   position: relative;
-  background: linear-gradient(91.87deg, #EC7027 0%, #354DCA 87.43%);
-  box-shadow: 0 0 10px #151F51;
-  border-radius: 3px;
-  padding: 0.8rem 3rem;
   display: flex;
   column-gap: 1rem;
   justify-content: center;
@@ -23,6 +19,7 @@
     color: $codenauts_white;
     z-index: 1;
     white-space: nowrap;
+    text-decoration: underline;
   }
 
   svg {
@@ -32,23 +29,7 @@
   }
 }
 
-.btn-ctn::before {
-  position: absolute;
-  content: "";
-  inset: 0; /* same as { top: 0; right: 0; bottom: 0; left: 0; } */
-  background: linear-gradient(96.18deg, #EC7027 0%, #354DCA 25.19%);
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.15s ease-in-out;
-  border-radius: 3px;
-}
-
-.btn-ctn:hover::before {
-  opacity: 1;
-}
-
-.btn-ctn:hover {
-  box-shadow: 0 0 10px 5px #151F51;
+.secondary-btn-ctn:hover {
   svg {
     transform: rotate(45deg);
   }

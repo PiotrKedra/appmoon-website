@@ -8,7 +8,6 @@ import ContactForm from '../components/contact-form';
 import '../components/card.sass'
 import FlippingCard from '../components/card';
 import { Helmet } from 'react-helmet';
-import favicon from '../images/codenauts.png'
 import MobileMenu from '../components/mobile-menu';
 import LanguageSelector from '../components/language-selector';
 import {useTranslation} from "gatsby-plugin-react-i18next";
@@ -52,7 +51,6 @@ const IndexPage = () => {
           },
           {
             property: `og:image`,
-            content: favicon
           },
         ]}
       />

@@ -10,10 +10,6 @@ html, body {
 }
 
 .main-ctn {
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //justify-content: center;
   position: relative;
 
   h1,h2,h3,h4,h5,h6,p,a {
@@ -26,16 +22,37 @@ html, body {
   h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 84px;
-    letter-spacing: -0.05em;
+    font-size: 84px;
+    line-height: 120%;
   }
 
   h2 {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 48px;
-    line-height: 63px;
+    line-height: 120%;
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  p {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .section-label {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #354DCA;
   }
 
   .ctn {
@@ -45,5 +62,41 @@ html, body {
     box-sizing: border-box;
     z-index: $main_z_index;
     position: relative;
+  }
+
+  .section-ctn {
+    padding: 8rem 0;
+  }
+
+  .text-ctn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  @media (max-width: 1088px) {
+    h1 {
+      font-size: 64px;
+    }
+
+    .ctn {
+      padding: 0 24px;
+    }
+  }
+
+  @media (max-width: 876px) {
+    h1 {
+      font-size: 52px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    h1,h2 {
+      font-size: 38px;
+    }
   }
 }

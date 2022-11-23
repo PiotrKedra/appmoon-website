@@ -6,131 +6,66 @@ $top_margin: 150px;
 .home-ctn {
   overflow: hidden;
 
-  .codenauts-bg-name-ctn {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-      font-size: 200px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 80%;
-      color: rgba(255, 255, 255, 0.02);
-    }
-  }
-
   .welcome-section-ctn {
     position: relative;
     display: flex;
     flex-direction: row;
     height: 100vh;
     width: 100%;
-    padding-top: $top_margin;
     box-sizing: border-box;
+    align-items: center;
 
-    .text-ctn {
+    .codenauts-bg-name-ctn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
-      max-width: 800px;
-      margin-left: 6rem;
-      z-index: $main_z_index;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
 
-      p {
+      span {
+        font-size: 300px;
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 21px;
-        margin-bottom: 2rem;
+        line-height: 80%;
+        color: rgba(255, 255, 255, 0.02);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
       }
-
-      h1 {
-        margin-bottom: 3rem;
-      }
     }
 
-    .orange-theme-circle {
-      position: absolute;
-      top: 120px;
-      right: 150px;
-      z-index: $zero_z_index;
-      box-sizing: border-box;
-      width: 195px;
-      height: 195px;
-      background: linear-gradient(79.58deg, #EC7027 28.59%, #FC9050 106.42%);
-      border: 1px solid rgba(27, 27, 27, 0.5);
-      box-shadow: 2px 2px 50px 10px rgba(236, 112, 39, 0.5);
-      border-radius: 50%;
-    }
-
-    .blue-theme-circle {
-      position: absolute;
-      top: 50vh;
-      right: 10px;
-      z-index: $zero_z_index;
-      box-sizing: border-box;
-      width: 259px;
-      height: 259px;
-      background: linear-gradient(71.25deg, #354DCA 31.32%, #657CF1 103.97%);
-      border: 1px solid rgba(27, 27, 27, 0.5);
-      box-shadow: 2px 2px 50px 10px rgba(53, 77, 202, 0.5);
-      border-radius: 50%;
-    }
-
-    .codenauts-tags-parent-ctn {
+    .text-ctn {
+      row-gap: 2rem;
+      z-index: 1;
       position: relative;
-      max-width: 150px;
-      height: 100%;
-    }
 
-    .blue-eclipse {
-      border-radius: 50%;
-      box-sizing: border-box;
-      position: absolute;
-      width: 405px;
-      height: 405px;
-      left: -200px;
-      top: 150px;
-      background: $codenauts_black;
-      border: 1px solid rgba(27, 27, 27, 0.5);
-      box-shadow: 2px 2px 50px 10px rgba(53, 77, 202, 0.5);
-    }
-
-    @media (max-width: 1190px) {
-      .codenauts-tags-parent-ctn {
-        display: none;
+      .sub-text {
+        max-width: 75%;
       }
-    }
 
-    @media (max-width: 836px) {
-      .text-ctn {
-        margin-left: 0;
+      .text-with-line-ctn {
+        display: flex;
+        column-gap: 2rem;
 
-        h1 {
-          font-size: 52px;
-          line-height: 130%;
+        .line {
+          margin-top: 8px;
+          background-color: $codenauts_orange;
+          min-width: 10vw;
+          height: 1px;
         }
       }
 
-      .blue-eclipse {
-        display: none;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .orange-theme-circle {
-        top: 90vh;
-        right: -60px;
-      }
-
-      .blue-theme-circle {
-        top: 30vh;
+      .theme {
+        position: absolute;
+        top: auto;
+        bottom: auto;
         right: -100px;
+        z-index: -1;
       }
     }
   }
@@ -139,42 +74,25 @@ $top_margin: 150px;
     .welcome-section-ctn {
       height: unset;
       min-height: 100vh;
-    }
-  }
 
-  .codenauts-tags-parent-ctn-mobile {
-    display: none;
+      .text-ctn {
+        .sub-text {
+          max-width: unset;
+        }
+
+        .theme {
+          right: -250px;
+        }
+      }
+    }
   }
 
   @media (max-width: 576px) {
-    .codenauts-bg-name-ctn {
-      display: none;
-    }
-
-    .codenauts-tags-parent-ctn-mobile {
-      display: block;
-      height: unset;
-
-      .codenauts-bg-name-ctn {
-        display: block;
-        top: 350px;
-
-        h1 {
-          font-size: 140px;
+    .welcome-section-ctn {
+      .text-ctn {
+        .btn-ctn {
+          margin-top: 1rem;
         }
-      }
-
-      .blue-eclipse {
-        border-radius: 50%;
-        box-sizing: border-box;
-        position: absolute;
-        width: 405px;
-        height: 405px;
-        left: -150px;
-        top: 60px;
-        background: $codenauts_black;
-        border: 1px solid rgba(27, 27, 27, 0.5);
-        box-shadow: 2px 2px 50px 10px rgba(53, 77, 202, 0.5);
       }
     }
   }
@@ -182,7 +100,6 @@ $top_margin: 150px;
   @media (max-width: 320px) {
     .welcome-section-ctn {
       .text-ctn {
-
         h1 {
           font-size: 36px;
         }
