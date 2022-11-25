@@ -28,10 +28,10 @@ const BLueFullCircle = ({className}) => (
   <div className={`blue-full-circle ${className}`}/>
 )
 
-const BlueMatrixWithCircle = ({className}) => (
-  <div className={`blue-matrix-with-circle ${className}`}>
-    <BlueCircle/>
+const BlueMatrixWithCircle = ({id, className}) => (
+  <div id={id} className={`blue-matrix-with-circle ${className}`}>
     <BlueMatrix/>
+    <BlueCircle/>
   </div>
 )
 

@@ -3,13 +3,17 @@ import { Helmet } from 'react-helmet';
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import '../../style/main.scss'
 import './style/welcome-section-style.scss'
-import WelcomeSection from './components/WelcomeSection';
+import WelcomeSection from './components/welcome-section';
 import OfferSection from './components/offer-section';
 import MainBtn from '../../components/buttons/btn';
 import StepsSection from './components/steps-section';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 const Home = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
   const {t} = useTranslation()
   return (
     <main className="main-ctn home-ctn">

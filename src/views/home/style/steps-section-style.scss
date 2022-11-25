@@ -1,19 +1,35 @@
 @import "../../../style/colors";
 
+.steps-theme-ctn {
+  .theme {
+    position: absolute;
+    left: -10%;
+    top: 50px;
+  }
+
+  .theme-top {
+    position: absolute;
+    right: -20px;
+    top: 200px;
+  }
+
+  .theme-bottom {
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+  }
+}
+
 .steps-ctn {
   display: flex;
   flex-direction: row;
+  position: relative;
 
-  .text-ctn {
+  #stepsTextCtn {
     flex: 2;
-    position: relative;
-
-    .theme {
-      position: absolute;
-      left: -150px;
-      top: -100px;
-      z-index: -1;
-    }
+    position: sticky;
+    top: 40%;
+    align-self: flex-start;
   }
 
   .steps-flex-ctn {
@@ -22,19 +38,6 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-
-    .theme-top {
-      position: absolute;
-      right: -180px;
-      top: 70px;
-      z-index: -1;
-    }
-
-    .theme-bottom {
-      position: absolute;
-      bottom: 100px;
-      right: -100px;
-    }
 
     .line-ctn {
       position: absolute;
@@ -85,12 +88,23 @@
         }
       }
 
+      .active-number-ctn {
+        > div {
+          background-color: $codenauts_white;
+
+          span {
+            color: $codenauts_black;
+            font-weight: 600;
+          }
+        }
+      }
+
       .text-ctn {
         flex:2;
         box-sizing: border-box;
         background: rgba(76, 79, 88, 0.3);
         border: 1px solid #4C4F58;
-        backdrop-filter: blur(10px);
+        //backdrop-filter: blur(10px);
         border-radius: 25px;
         padding: 2rem;
 
@@ -113,9 +127,25 @@
 }
 
 @media (max-width: 576px) {
+  .steps-theme-ctn {
+    .theme-top {
+      right: -70px;
+      top: 600px;
+    }
+
+    .theme-bottom {
+      bottom: 200px;
+      right: 10px;
+    }
+  }
+
   .steps-ctn {
     flex-direction: column;
     row-gap: 2rem;
+
+    #stepsTextCtn {
+      position: unset;
+    }
 
     .steps-flex-ctn {
       width: 100%;

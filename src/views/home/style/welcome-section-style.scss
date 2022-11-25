@@ -3,9 +3,11 @@
 
 $top_margin: 150px;
 
-.home-ctn {
+.welcome-section {
   overflow: hidden;
+}
 
+.home-ctn {
   .welcome-section-ctn {
     position: relative;
     display: flex;
@@ -48,6 +50,10 @@ $top_margin: 150px;
         max-width: 75%;
       }
 
+      span {
+        display: inline-block;
+      }
+
       .text-with-line-ctn {
         display: flex;
         column-gap: 2rem;
@@ -66,6 +72,10 @@ $top_margin: 150px;
         bottom: auto;
         right: -100px;
         z-index: -1;
+
+        .matrix {
+          z-index: -1;
+        }
       }
     }
   }

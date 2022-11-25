@@ -66,12 +66,22 @@ html, body {
 
   .section-ctn {
     padding: 8rem 0;
+    position: relative;
   }
 
   .text-ctn {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+  }
+
+  .theme-ctn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
   }
 
   @media (max-width: 1088px) {

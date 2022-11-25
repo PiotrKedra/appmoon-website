@@ -3,20 +3,52 @@ import '../style/offer-section-style.scss'
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import SecondaryBtn from '../../../components/buttons/secondary-btn';
 import { OrangeFullCircle } from '../../../components/theme/theme-component';
+import { gsap } from 'gsap';
+
 
 const OfferSection = () => {
   const {t} = useTranslation()
+  const offerCtn = React.useRef(null);
+
+  React.useEffect(() => {
+    gsap.from('#offerTextCtn', {
+      opacity: 0,
+      y: 100,
+      scrollTrigger: {
+        trigger: '.offer-ctn',
+        scrub: 1,
+        start: "top 95%",
+        end: 'top 90%',
+      }
+    })
+
+    const offerItems = offerCtn.current.querySelectorAll(".text-ctn")
+    for (const offerItem of offerItems) {
+      gsap.from(offerItem, {
+        opacity: 0,
+        y: 100,
+        scrollTrigger: {
+          trigger: offerItem,
+          scrub: 1,
+          start: "top 95%",
+          end: 'top 90%',
+        }
+      })
+    }
+  }, [])
 
   return (
     <section className="section-ctn">
+      <div className="theme-ctn offer-theme-ctn">
+        <OrangeFullCircle className="theme"/>
+      </div>
       <div className="ctn offer-ctn">
-        <div className="text-ctn">
+        <div id="offerTextCtn" className="text-ctn">
           <span className="section-label">{t`home.our_offer`}</span>
           <h2>{t`home.offer_title`}</h2>
           <p>{t`home.offer_description`}</p>
         </div>
-        <div className="offer-item-up-ctn">
-          <OrangeFullCircle className="theme"/>
+        <div className="offer-item-up-ctn" ref={offerCtn}>
           <div>
             <div className="text-ctn">
               <h3>{t`home.web_applications`}</h3>

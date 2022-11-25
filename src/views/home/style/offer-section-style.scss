@@ -1,11 +1,25 @@
 @import "../../../style/colors";
 
+.offer-theme-ctn {
+  .theme {
+    position: absolute;
+    right: -50px;
+    top: 350px;
+    height: 300px;
+    width: 300px;
+  }
+}
+
 .offer-ctn {
   display: flex;
   gap: 4rem;
+  position: relative;
 
-  .text-ctn {
+  #offerTextCtn {
     flex: 2;
+    position: sticky;
+    top: 35%;
+    align-self: start;
   }
 
   .offer-item-up-ctn {
@@ -14,14 +28,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-
-    .theme {
-      position: absolute;
-      right: -100px;
-      top: 250px;
-      height: 300px;
-      width: 300px;
-    }
 
     > div {
       display: flex;
@@ -33,7 +39,7 @@
         box-sizing: border-box;
         background: rgba(76, 79, 88, 0.3);
         border: 1px solid #4C4F58;
-        backdrop-filter: blur(10px);
+        //backdrop-filter: blur(10px);
         border-radius: 25px;
         padding: 2rem;
         row-gap: 2rem;
@@ -83,6 +89,11 @@
 @media (max-width: 576px) {
   .offer-ctn {
     flex-direction: column;
+
+    #offerTextCtn {
+      position: unset;
+    }
+
     .offer-item-up-ctn {
       > div {
         > div {
