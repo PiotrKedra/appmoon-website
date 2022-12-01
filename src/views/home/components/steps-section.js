@@ -37,18 +37,6 @@ const StepsSection = () => {
   const stepsCtn = React.useRef(null);
 
   React.useEffect(() => {
-    // gsap.to('#stepsTextCtn', {
-    //   x: 100,
-    //   scrollTrigger: {
-    //     trigger: '#stepsTextCtn',
-    //     scrub: 1,
-    //     pin: true,
-    //     start: "center center",
-    //     end: 'bottom bottom',
-    //     markers: true,
-    //   }
-    // })
-
     const steps = stepsCtn.current.querySelectorAll(".text-ctn")
     for (const step of steps) {
       gsap.from(step, {

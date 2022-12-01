@@ -9,6 +9,7 @@ import MainBtn from '../../components/buttons/btn';
 import StepsSection from './components/steps-section';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import StartupSection from './components/statrup-section';
 
 
 const Home = () => {
@@ -38,6 +39,8 @@ const Home = () => {
       <WelcomeSection/>
 
       <OfferSection/>
+
+      <StartupSection/>
 
       <StepsSection/>
 

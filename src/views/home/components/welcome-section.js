@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import '../style/codentaus-tags-style.scss'
 import MainBtn from '../../../components/buttons/btn';
 import { BlueMatrixWithCircle } from '../../../components/theme/theme-component';
 import { gsap } from "gsap";
@@ -21,7 +20,6 @@ const WelcomeSection = () => {
             scrub: 1,
             start: "top center",
             end: 'bottom 0',
-            markers: true,
           }
         })
 
@@ -32,7 +30,6 @@ const WelcomeSection = () => {
             scrub: 1,
             start: "top center",
             end: 'bottom 0',
-            markers: true,
           }
         })
 
@@ -43,7 +40,6 @@ const WelcomeSection = () => {
             scrub: 1,
             start: "top center",
             end: 'bottom 0',
-            markers: true,
           }
         })
       }

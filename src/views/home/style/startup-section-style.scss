@@ -1,0 +1,193 @@
+@import '../../../style/colors';
+
+.startup-theme-ctn {
+
+}
+
+.startup-section-ctn {
+  display: flex;
+  gap: 4rem;
+  overflow: hidden;
+  padding-bottom: 4rem !important;
+  align-items: center;
+
+  > div {
+    flex: 1;
+  }
+
+  .circle-tag-main-ctn {
+    position: relative;
+    width: 400px;
+    height: 400px;
+
+    .circle {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border: 1px solid $codenauts_white;
+      border-radius: 50%;
+      left: 40px;
+      top: 20px;
+    }
+
+    .tag-ctn {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      position: absolute;
+      padding: 6px 12px;
+      min-width: 50px;
+      left: 50%;
+      top: 50%;
+      background: $codenauts_black;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+      h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .tag1 {
+      animation: circular 35s linear infinite;
+    }
+
+    .tag2 {
+      animation: circular2 35s linear infinite;
+    }
+
+    .tag3 {
+      animation: circular3 35s linear infinite;
+    }
+
+    .tag4 {
+      animation: circular4 35s linear infinite;
+    }
+
+    .tag5 {
+      animation: circular5 35s linear infinite;
+    }
+
+    .tag6 {
+      animation: circular6 35s linear infinite;
+    }
+
+    @keyframes circular {
+      from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+    }
+
+    @keyframes circular2 {
+      from { transform: rotate(0deg) translate(100px, -173px) rotate(0deg); }
+      to   { transform: rotate(360deg) translate(100px, -173px) rotate(-360deg); }
+    }
+
+    @keyframes circular3 {
+      from { transform: rotate(0deg) translate(-100px, -173px) rotate(0deg); }
+      to   { transform: rotate(360deg) translate(-100px, -173px) rotate(-360deg); }
+    }
+
+    @keyframes circular4 {
+      from { transform: rotate(0deg) translateX(-200px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(-200px) rotate(-360deg); }
+    }
+
+    @keyframes circular5 {
+      from { transform: rotate(0deg) translate(-100px, 173px) rotate(0deg); }
+      to   { transform: rotate(360deg) translate(-100px, 173px) rotate(-360deg); }
+    }
+
+    @keyframes circular6 {
+      from { transform: rotate(0deg) translate(100px, 173px) rotate(0deg); }
+      to   { transform: rotate(360deg) translate(100px, 173px) rotate(-360deg); }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .startup-section-ctn {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+
+    .circle-animation-ctn {
+      padding-right: 40px;
+
+      .circle-tag-main-ctn {
+        margin-left: -40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .startup-section-ctn {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+
+    .circle-animation-ctn {
+      padding-right: 40px;
+
+      .circle-tag-main-ctn {
+        width: 300px;
+        height: 300px;
+        margin-left: -40px;
+
+        .circle {
+          width: 300px;
+          height: 300px;
+          left: 40px;
+          top: 20px;
+        }
+
+        .tag-ctn {
+          padding: 6px 12px;
+          min-width: 50px;
+
+          h3 {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+
+        @keyframes circular {
+          from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+          to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        @keyframes circular2 {
+          from { transform: rotate(0deg) translate(75px, -130px) rotate(0deg); }
+          to   { transform: rotate(360deg) translate(75px, -130px) rotate(-360deg); }
+        }
+
+        @keyframes circular3 {
+          from { transform: rotate(0deg) translate(-75px, -130px) rotate(0deg); }
+          to   { transform: rotate(360deg) translate(-75px, -130px) rotate(-360deg); }
+        }
+
+        @keyframes circular4 {
+          from { transform: rotate(0deg) translateX(-150px) rotate(0deg); }
+          to   { transform: rotate(360deg) translateX(-150px) rotate(-360deg); }
+        }
+
+        @keyframes circular5 {
+          from { transform: rotate(0deg) translate(-75px, 130px) rotate(0deg); }
+          to   { transform: rotate(360deg) translate(-75px, 130px) rotate(-360deg); }
+        }
+
+        @keyframes circular6 {
+          from { transform: rotate(0deg) translate(75px, 130px) rotate(0deg); }
+          to   { transform: rotate(360deg) translate(75px, 130px) rotate(-360deg); }
+        }
+      }
+    }
+  }
+}
+
+
