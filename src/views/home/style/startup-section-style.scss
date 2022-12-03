@@ -1,7 +1,17 @@
 @import '../../../style/colors';
 
 .startup-theme-ctn {
+  .orange-matrix {
+    position: absolute;
+    top: 400px;
+    left: 250px;
+  }
 
+  .theme-circle {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+  }
 }
 
 .startup-section-ctn {
@@ -28,6 +38,14 @@
       border-radius: 50%;
       left: 40px;
       top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg, path {
+        width: 100px;
+        height: 100px;
+      }
     }
 
     .tag-ctn {
@@ -125,7 +143,29 @@
   }
 }
 
+@media (max-width: 1600px) {
+  .startup-theme-ctn {
+    .orange-matrix {
+      left: 100px;
+    }
+  }
+}
+
 @media (max-width: 1000px) {
+  .startup-theme-ctn {
+    .orange-matrix {
+      top: 280px;
+      left: -20px;
+    }
+
+    .theme-circle {
+      width: 300px;
+      height: 300px;
+      top: 550px;
+      right: -100px;
+    }
+  }
+
   .startup-section-ctn {
     flex-direction: column;
     align-items: center;

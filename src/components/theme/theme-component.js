@@ -12,6 +12,16 @@ const BlueMatrix = ({className}) => (
   />
 );
 
+const OrangeMatrix = ({className}) => (
+  <StaticImage
+    src="../../images/theme/matrix-orange-theme.png"
+    alt="Theme component"
+    className={`matrix ${className}`}
+    placeholder="none"
+    loading="lazy"
+  />
+);
+
 const BlueCircle = ({className}) => (
   <div className={`blue-circle ${className}`}/>
 )
@@ -37,6 +47,7 @@ const BlueMatrixWithCircle = ({id, className}) => (
 
 export {
   BlueMatrix,
+  OrangeMatrix,
   BlueCircle,
   BlueMatrixWithCircle,
   OrangeFullCircle,
