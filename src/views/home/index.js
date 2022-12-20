@@ -10,6 +10,7 @@ import StepsSection from './components/steps-section';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import StartupSection from './components/statrup-section';
+import ContactSection from './components/contact-section';
 
 
 const Home = () => {
@@ -43,6 +44,8 @@ const Home = () => {
       <StartupSection/>
 
       <StepsSection/>
+
+      <ContactSection/>
 
       <div style={{height: '100vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         <MainBtn text="Contact us"/>

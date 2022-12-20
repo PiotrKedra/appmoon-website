@@ -59,7 +59,7 @@ const StepsSection = () => {
           start: "top 40%",
           end: 'bottom top',
           scrub: true,
-          toggleClass: "active-number-ctn"
+          toggleClass: "active-number-ctn",
         }
       })
     }

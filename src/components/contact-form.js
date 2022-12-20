@@ -1,58 +1,57 @@
-import React from 'react';
-import { BsArrowRight } from 'react-icons/bs';
+import React from 'react'
+import { BsArrowUpRightCircle } from 'react-icons/bs'
 import emailjs from "emailjs-com"
-import { useTranslation } from 'gatsby-plugin-react-i18next';
-
-
+import { useTranslation } from 'gatsby-plugin-react-i18next'
+import './contact-form-style.scss'
 
 const ContactForm = () => {
   const {t} = useTranslation()
 
-  const LOADING_MSG = t`home.sending`;
-  const SUCCESS_MSG = t`home.email_sent` + ` 😃`;
+  const LOADING_MSG = t`home.sending`
+  const SUCCESS_MSG = t`home.email_sent` + ` 😃`
   const ERROR_MSG = t`home.some_error` + ` 😱`
 
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [message, setMessage] = React.useState('');
+  const [name, setName] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [message, setMessage] = React.useState('')
 
-  const [isEmailValid, setIsEmailValid] = React.useState(true);
-  const [isMessageValid, setIsMessageValid] = React.useState(true);
+  const [isEmailValid, setIsEmailValid] = React.useState(true)
+  const [isMessageValid, setIsMessageValid] = React.useState(true)
 
-  const [submitted, setSubmitted] = React.useState(false);
-  const [submitMsg, setSubmitMsg] = React.useState(LOADING_MSG);
+  const [submitted, setSubmitted] = React.useState(false)
+  const [submitMsg, setSubmitMsg] = React.useState(LOADING_MSG)
 
 
   const handleChangeName = (event) => {
-    setName(event.target.value);
+    setName(event.target.value)
   }
 
   const handleChangeEmail = (event) => {
-    setEmail(event.target.value);
+    setEmail(event.target.value)
     setIsEmailValid(true)
   }
 
   const handleChangeMessage = (event) => {
-    setMessage(event.target.value);
+    setMessage(event.target.value)
     setIsMessageValid(true)
   }
 
   const validateEmail = () => {
-    const re = /\S+@\S+\.\S+/;
+    const re = /\S+@\S+\.\S+/
     return re.test(email);
   }
 
   const handleContactForm = (event) => {
     event.preventDefault()
-    let isValid = true;
+    let isValid = true
     if (validateEmail() === false) {
       setIsEmailValid(false)
-      isValid = false;
+      isValid = false
     }
 
     if (message.length === 0) {
       setIsMessageValid(false)
-      isValid = false;
+      isValid = false
     }
 
     if (isValid) {
@@ -71,7 +70,7 @@ const ContactForm = () => {
         sendTo,
         process.env.GATSBY_EMAILJS_USER_ID,
       ).then(
-        result => {
+        () => {
           setSubmitMsg(SUCCESS_MSG)
           emailjs.send(
             process.env.GATSBY_EMAILJS_SERVICE_ID,
@@ -86,7 +85,7 @@ const ContactForm = () => {
           setTimeout(function() { setSubmitted(false) }, 5000);
 
         },
-        error => {
+        () => {
           setSubmitMsg(ERROR_MSG)
         }
       )
@@ -105,8 +104,8 @@ const ContactForm = () => {
           placeholder={t`home.your_name`}
           value={name}
           onChange={handleChangeName}
-          style={{margin: '0.6rem 0'}}
         />
+        <p className="error-msg"/>
         <input
           type="text"
           placeholder={t`home.email`}
@@ -120,7 +119,7 @@ const ContactForm = () => {
         </p>
         <textarea
           name="message"
-          rows="4"
+          rows="1"
           placeholder={t`home.message`}
           value={message}
           onChange={handleChangeMessage}
@@ -129,9 +128,9 @@ const ContactForm = () => {
         <p className="error-msg" style={isMessageValid ? null : {opacity: 1}}>
           {t`home.empty_message`} 😅
         </p>
-        <button type="submit" disabled={submitted}>
-          {t`home.send`}
-          <BsArrowRight style={{marginLeft: '1rem'}} size="1.8rem"/>
+        <button type="submit" disabled={submitted} className="secondary-btn-ctn">
+          <p>{t`home.send`}</p>
+          <BsArrowUpRightCircle size={20}/>
         </button>
       </form>
       <p className="submitted-msg" style={submitted === true ? {display: 'block'} : null}>{submitMsg}</p>
