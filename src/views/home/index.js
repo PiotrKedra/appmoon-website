@@ -5,12 +5,15 @@ import '../../style/main.scss'
 import './style/welcome-section-style.scss'
 import WelcomeSection from './components/welcome-section';
 import OfferSection from './components/offer-section';
-import MainBtn from '../../components/buttons/btn';
 import StepsSection from './components/steps-section';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import StartupSection from './components/statrup-section';
 import ContactSection from './components/contact-section';
+import TeamSection from './components/team-section';
+import PartnersSection from './components/partners-section';
+import Footer from '../../components/layout/footer';
+import Menu from '../../components/layout/menu';
 
 
 const Home = () => {
@@ -37,6 +40,8 @@ const Home = () => {
         ]}
       />
 
+      <Menu/>
+
       <WelcomeSection/>
 
       <OfferSection/>
@@ -45,11 +50,13 @@ const Home = () => {
 
       <StepsSection/>
 
+      <TeamSection/>
+
+      <PartnersSection/>
+
       <ContactSection/>
 
-      <div style={{height: '100vh', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-        <MainBtn text="Contact us"/>
-      </div>
+      <Footer/>
 
     </main>
   );

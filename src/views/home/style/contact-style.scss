@@ -2,9 +2,10 @@
 
 .contact-section {
   margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-bottom: 0.5rem;
   background-color: $codenauts_blue;
   padding: 1rem;
+  overflow: hidden;
 
   .inner-contact-section {
     width: 100%;

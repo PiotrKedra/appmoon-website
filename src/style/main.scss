@@ -29,13 +29,13 @@ html, body {
   h2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 120%;
   }
 
   h3 {
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 22px;
     line-height: 120%;
   }
@@ -65,7 +65,7 @@ html, body {
   }
 
   .section-ctn {
-    padding: 8rem 0;
+    padding: 10rem 0;
     position: relative;
   }
 
@@ -107,6 +107,12 @@ html, body {
   @media (max-width: 576px) {
     h1,h2 {
       font-size: 38px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    h3 {
+      font-size: 18px;
     }
   }
 }

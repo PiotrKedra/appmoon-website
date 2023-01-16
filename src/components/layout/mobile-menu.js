@@ -2,7 +2,7 @@ import React from 'react';
 // import '../pages/style.css'
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import {IoMenuOutline, IoCloseOutline} from 'react-icons/io5'
-import { ABOUT_SECTION, CONTACT_SECTION, OFFER_SECTION, START_SECTION } from './home-page-sections';
+import { ABOUT_SECTION, CONTACT_SECTION, OFFER_SECTION, START_SECTION } from '../home-page-sections';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import LanguageSelector from './language-selector';
 
@@ -25,8 +25,8 @@ const MobileMenu = () => {
 
   const getMenuClassNames = () => {
     if(menuState === MENU_CLOSED)
-      return 'mobile-menu-ctn-off ' + getAnimationClass()
-    return 'mobile-menu-ctn-on ' + getAnimationClass()
+      return 'mobile-menu mobile-menu-ctn-off ' + getAnimationClass()
+    return 'mobile-menu mobile-menu-ctn-on ' + getAnimationClass()
   }
 
   return (

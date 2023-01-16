@@ -1,0 +1,101 @@
+@import '../../../style/colors';
+
+.team-theme-ctn {
+  z-index: -1;
+  .orange-circle {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    width: 220px;
+    height: 220px;
+    z-index: -1;
+  }
+
+  .blue-circle {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
+    z-index: -1;
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.team-section-ctn {
+  margin-top: 10rem !important;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  overflow: hidden;
+
+  .members-ctn {
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .text-ctn {
+      flex: 1;
+      min-width: 280px;
+      width: 100%;
+      background: rgba(76, 79, 88, 0.3);
+      border: 1px solid #4C4F58;
+      //backdrop-filter: blur(10px);
+      border-radius: 25px;
+      padding: 2rem;
+      transition: all .15s linear;
+      cursor: pointer;
+      box-sizing: border-box;
+      gap: 2rem;
+      z-index: 2;
+
+      h3,p {
+        opacity: 0.85;
+        transition: all .15s linear;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .secondary-btn-ctn {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .top-ctn {
+        display: flex;
+        justify-content: space-between;
+
+        .img-ctn {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+
+          img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .text-ctn:hover {
+      background-color: $codenauts_blue;
+
+      h3,p {
+        opacity: 1;
+      }
+
+      .secondary-btn-ctn {
+        svg {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}

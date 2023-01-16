@@ -60,9 +60,13 @@ const StartupSection = () => {
         </div>
         <div className="text-ctn">
           <span className="section-label">{t`home.steps_label`}</span>
-          <h2>Startup sprawdzić czy twój pomysł wypali?</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
+          <h2>Turning startup ideas into successful applications</h2>
+          <p>
+            Our software house is dedicated to helping startups succeed. We offer technical support and ongoing guidance to help startups navigate the challenges of building and growing a successful business. Our team of skilled developers has a track record of helping startups create MVP projects that demonstrate the viability and potential of their ideas.
+<br/>
+<br/>
+            In addition to providing technical support, we work closely with our clients to understand their goals and develop custom software solutions that meet their needs. We are committed to being a valuable partner to our clients and helping them succeed.
+          </p>
         </div>
       </div>
     </section>

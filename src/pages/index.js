@@ -5,11 +5,9 @@ import { GoMail } from "react-icons/go";
 import { BsArrowRight } from "react-icons/bs";
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import ContactForm from '../components/contact-form';
-import '../components/card.sass'
-import FlippingCard from '../components/card';
 import { Helmet } from 'react-helmet';
-import MobileMenu from '../components/mobile-menu';
-import LanguageSelector from '../components/language-selector';
+import MobileMenu from '../components/layout/mobile-menu';
+import LanguageSelector from '../components/layout/language-selector';
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import { graphql } from 'gatsby';
 import { ABOUT_SECTION, CONTACT_SECTION, OFFER_SECTION, START_SECTION } from '../components/home-page-sections';
@@ -53,22 +51,6 @@ const IndexPage = () => {
             property: `og:image`,
           },
         ]}
-      />
-
-      <StaticImage
-        src="../images/blurred-bg.png"
-        alt="blurred background"
-        className="gradient main-bg-desktop"
-        placeholder="none"
-        loading="lazy"
-      />
-
-      <StaticImage
-        src="../images/blurred-bg-mobile.png"
-        alt="blurred background"
-        className="gradient main-bg-mobile"
-        placeholder="none"
-        loading="lazy"
       />
 
       <MobileMenu/>
@@ -150,70 +132,6 @@ const IndexPage = () => {
             <h3>{t`home.r_and_d`}</h3>
             <p>{t`home.r_and_d_text`}</p>
           </div>
-        </div>
-      </div>
-      </div>
-
-      <div className="overflow-ctn">
-      <div id={ABOUT_SECTION} className="ctn about-us_ctn">
-        <div style={{zIndex: 1}}>
-          <p className="section-subtitle">{t`home.about_us2`}</p>
-          <h2>{t`home.some_info`} <span className="h2-emoji">👋</span></h2>
-        </div>
-        <div className="members-ctn">
-          <StaticImage
-            src="../images/blue-gradient-moon.png"
-            alt="Moon gradient"
-            className="member-left-gradient"
-            placeholder="none"
-          />
-          <StaticImage
-            src="../images/purple-gradient-moon.png"
-            alt="Moon gradient"
-            className="member-right-gradient"
-            placeholder="none"
-          />
-          <FlippingCard
-            img={(
-              <StaticImage
-                src="../images/pawel-kocwa.jpg"
-                alt="Paweł Kocwa"
-                className="member-avatar"
-              />
-            )}
-            name={'PAWEŁ KOCWA'}
-            shortText={t`home.pawel_text`}
-            longText={t`home.pawel_long_text`}
-            linkedin={'https://www.linkedin.com/in/pawelkocwa/'}
-          />
-          <FlippingCard
-            img={(
-              <StaticImage
-                src="../images/milosz-blasiak.jpg"
-                alt="Miłosz Blasiak"
-                className="member-avatar"
-              />
-            )}
-            name={'MIŁOSZ BLASIAK'}
-            shortText={t`home.milosz_text`}
-            longText={t`home.milosz_long_text`}
-            linkedin={'https://www.linkedin.com/in/mi%C5%82osz-blasiak-b97613179'}
-            github={'https://github.com/mblasiak'}
-          />
-          <FlippingCard
-            img={(
-              <StaticImage
-                src="../images/piotr-kedra.jpg"
-                alt="Piotr Kedra"
-                className="member-avatar"
-              />
-            )}
-            name={'PIOTR KĘDRA'}
-            shortText={t`home.piotr_text`}
-            longText={t`home.piotr_long_text`}
-            linkedin={'https://www.linkedin.com/in/pkedra/'}
-            github={'https://github.com/PiotrKedra'}
-          />
         </div>
       </div>
       </div>

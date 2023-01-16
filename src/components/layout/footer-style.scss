@@ -1,0 +1,85 @@
+@import '../../style/colors';
+
+.footer-section {
+  background-color: $codenauts_blue;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+
+  .ctn {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .text-ctn {
+      gap: 1rem;
+
+      .footer-contact-text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 110%;
+        color: $codenauts_orange;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+      }
+    }
+
+    .social-ctn {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        svg {
+          color: $codenauts_white;
+          transition: all .2s ease-out;
+          width: 2rem;
+          height: auto;
+        }
+
+        svg:hover {
+          color: $codenauts_orange;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 676px) {
+  .footer-section {
+    .ctn {
+      gap: 2rem;
+
+      .text-ctn {
+        .footer-contact-text {
+          font-size: 44px;
+        }
+      }
+
+      .social-ctn {
+        gap: 2rem;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        svg {
+          width: 1.5rem;
+        }
+      }
+    }
+  }
+}
