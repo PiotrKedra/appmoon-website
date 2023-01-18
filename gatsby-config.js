@@ -12,6 +12,14 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.codenauts.io/',
+        sitemap: 'https://www.codenauts.io/sitemap/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
