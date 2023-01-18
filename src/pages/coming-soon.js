@@ -12,25 +12,25 @@ const mainCtn = {
   height: '100vh',
 }
 
-const NotFoundPage = () => {
+const ComingSoon = () => {
   return (
     <Layout
       isMenu={false}
       isFooter={false}
-      title={'404 🤔'}
-      description={'Page Not Found'}
-      canonicalLink={'/404'}
+      title={'Coming soon... 👩‍🚀🚀'}
+      description={'We are working here'}
+      canonicalLink={'/coming-soon'}
     >
       <div className="ctn" style={mainCtn}>
-        <span>🤔</span>
-        <h1>404</h1>
+        <p>👩‍🚀🚀 Coming soon...</p>
+        <h1>We are working here</h1>
         <SecondaryBtn to="/" text='Go home'/>.
       </div>
     </Layout>
   )
 }
 
-export default NotFoundPage
+export default ComingSoon
 
 export const query = graphql`
   query ($language: String!) {

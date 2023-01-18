@@ -35,7 +35,7 @@
       row-gap: 2rem;
       height: fit-content;
 
-      > div {
+      > a {
         box-sizing: border-box;
         background: rgba(76, 79, 88, 0.3);
         border: 1px solid #4C4F58;
@@ -45,14 +45,16 @@
         row-gap: 2rem;
         transition: all .15s linear;
         cursor: pointer;
+        text-decoration: none;
 
         h3,p {
           opacity: 0.85;
           transition: all .15s linear;
+          text-decoration: none;
         }
       }
 
-      > div:hover {
+      > a:hover {
         background-color: $codenauts_blue;
 
         h3,p {

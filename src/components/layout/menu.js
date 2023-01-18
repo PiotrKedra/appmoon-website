@@ -16,7 +16,7 @@ const Menu = () => {
         <div className="ctn menu-inner-ctn">
           <Link to="/" className="logo-ctn">
             <StaticImage
-              src="../images/codenauts-logo.png"
+              src="../../images/codenauts-logo.png"
               alt="Codenauts logo"
               placeholder="none"
               loading="eager"

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Helmet } from 'react-helmet';
+
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import '../../style/main.scss'
 import './style/welcome-section-style.scss'
@@ -12,36 +12,20 @@ import StartupSection from './components/statrup-section';
 import ContactSection from './components/contact-section';
 import TeamSection from './components/team-section';
 import PartnersSection from './components/partners-section';
-import Footer from '../../components/layout/footer';
-import Menu from '../../components/layout/menu';
+import Layout from '../../components/layout/layout';
 
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
-
   const {t} = useTranslation()
+
   return (
-    <main className="main-ctn home-ctn">
-
-      <Helmet
-        title={t`title`}
-        meta={[
-          {
-            name: `description`,
-            content: t`description`,
-          },
-          {
-            name: `author`,
-            content: 'Codenauts'
-          },
-          {
-            property: `og:image`,
-          },
-        ]}
-      />
-
-      <Menu/>
-
+    <Layout
+      title={t('home.title')}
+      description={t('home.description')}
+      mainClass={'home-ctn'}
+      canonicalLink={'/'}
+    >
       <WelcomeSection/>
 
       <OfferSection/>
@@ -55,10 +39,7 @@ const Home = () => {
       <PartnersSection/>
 
       <ContactSection/>
-
-      <Footer/>
-
-    </main>
+    </Layout>
   );
 }
 

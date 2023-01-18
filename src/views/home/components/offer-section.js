@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/offer-section-style.scss'
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import SecondaryBtn from '../../../components/buttons/secondary-btn';
 import { OrangeFullCircle } from '../../../components/theme/theme-component';
 import { gsap } from 'gsap';
@@ -50,28 +50,28 @@ const OfferSection = () => {
         </div>
         <div className="offer-item-up-ctn" ref={offerCtn}>
           <div>
-            <div className="text-ctn">
+            <Link to="/coming-soon"  className="text-ctn">
               <h3>{t`home.web_applications`}</h3>
               <p>{t`home.web_applications_text`}</p>
-              <SecondaryBtn text={t`home.read_more`}/>
-            </div>
-            <div className="text-ctn">
+              <SecondaryBtn text={t`home.read_more`} isLink={false}/>
+            </Link>
+            <Link to="/coming-soon"  className="text-ctn">
               <h3>{t`home.embedded_systems`}</h3>
               <p>{t`home.embedded_text`}</p>
-              <SecondaryBtn text={t`home.read_more`}/>
-            </div>
+              <SecondaryBtn text={t`home.read_more`} isLink={false}/>
+            </Link>
           </div>
           <div>
-            <div className="text-ctn">
+            <Link to="/coming-soon"  className="text-ctn">
               <h3>{t`home.mobile_apps`}</h3>
               <p>{t`home.mobile_apps_text`}</p>
-              <SecondaryBtn text={t`home.read_more`}/>
-            </div>
-            <div className="text-ctn">
+              <SecondaryBtn text={t`home.read_more`} isLink={false}/>
+            </Link>
+            <Link to="/coming-soon"  className="text-ctn">
               <h3>{t`home.r_and_d`}</h3>
               <p>{t`home.r_and_d_text`}</p>
-              <SecondaryBtn text={t`home.read_more`}/>
-            </div>
+              <SecondaryBtn text={t`home.read_more`} isLink={false}/>
+            </Link>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const PartnersSection = () => (
     <div className="ctn">
       <h2>We are proud to be working with you</h2>
       <div className="logo-grid">
-        <a href="https://www.innovationshub.pl/" target="_blank">
+        <a href="https://www.innovationshub.pl/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/inhub-logo-white.png"
             alt="Innovations Hub Foundation logo"
@@ -15,7 +15,7 @@ const PartnersSection = () => (
             loading="lazy"
           />
         </a>
-        <a href="https://www.linkedin.com/company/play-air/" target="_blank">
+        <a href="https://www.linkedin.com/company/play-air/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/playair-logo.png"
             alt="Play.air logo"
@@ -23,7 +23,7 @@ const PartnersSection = () => (
             loading="lazy"
           />
         </a>
-        <a href="https://www.sma-magnetics.com/" target="_blank">
+        <a href="https://www.sma-magnetics.com/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/sma-logo.png"
             alt="SMA Magnetics logo"
@@ -31,7 +31,7 @@ const PartnersSection = () => (
             loading="lazy"
           />
         </a>
-        <a href="https://mrame.cm-uj.krakow.pl/" target="_blank">
+        <a href="https://mrame.cm-uj.krakow.pl/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/mrame-logo.png"
             alt="Mixed Reality supporting Advanced Medical Education logo"
@@ -39,7 +39,7 @@ const PartnersSection = () => (
             loading="lazy"
           />
         </a>
-        <a href="https://sun-times.pl/" target="_blank">
+        <a href="https://sun-times.pl/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/suntimes-logo.png"
             alt="Sun Times logo"
@@ -47,7 +47,7 @@ const PartnersSection = () => (
             loading="lazy"
           />
         </a>
-        <a href="https://www.ossa.pl/" target="_blank">
+        <a href="https://www.ossa.pl/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/ossa-logo.png"
             alt="OSSA logo"
@@ -55,7 +55,7 @@ const PartnersSection = () => (
             loading="lazy"
           />
         </a>
-        <a href="https://www.doctorkimchi.com/" target="_blank">
+        <a href="https://www.doctorkimchi.com/" target="_blank" rel="noreferrer">
           <StaticImage
             src="../../../images/home/partners/doctor-kimchi-logo.png"
             alt="Doctor Kimchi logo"

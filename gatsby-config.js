@@ -4,7 +4,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.codenauts.io/`,
-    title: `Custom Software & Embedded Development - Codenauts`,
+    title: `Custom Software & Embedded Development | Codenauts`,
     description: `We provide tailor-made IT solutions. Web applications, embedded systems, mobile apps, desktop apps. Transfer your idea to a real world solution!`,
     author: `Codenauts`,
   },

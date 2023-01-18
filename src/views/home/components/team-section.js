@@ -5,7 +5,56 @@ import { useTranslation } from 'gatsby-plugin-react-i18next'
 import { BLueFullCircle, OrangeFullCircle } from '../../../components/theme/theme-component'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import '../style/team-section.scss'
-import SecondaryBtn from '../../../components/buttons/secondary-btn';
+
+const TEAM_MEMBERS = [
+  {
+    name: 'PAWEŁ KOCWA',
+    shortText: 'home.pawel_text',
+    longText: 'home.pawel_long_text',
+    linkedin: 'https://linkedin.com/in/pawelkocwa',
+    pic: (
+      <StaticImage
+        src="../../../images/team/pawel-kocwa.jpg"
+        alt="Paweł Kocwa"
+        className="member-avatar"
+        loading="lazy"
+        placeholder="none"
+      />
+    )
+  },
+  {
+    name: 'Piotr Kędra',
+    shortText: 'home.piotr_text',
+    longText: 'home.piotr_long_text',
+    linkedin: 'https://linkedin.com/in/pkedra',
+    github: 'https://github.com/piotrkedra',
+    pic: (
+      <StaticImage
+        src="../../../images/team/piotr-kedra.jpeg"
+        alt="Piotr Kedra"
+        className="member-avatar"
+        loading="lazy"
+        placeholder="none"
+      />
+    )
+  },
+  {
+    name: 'Miłosz Blasiak',
+    shortText: 'home.milosz_text',
+    longText: 'home.milosz_long_text',
+    linkedin: 'https://linkedin.com/in/miłosz-blasiak-b97613179',
+    github: 'https://github.com/mblasiak',
+    pic: (
+      <StaticImage
+        src="../../../images/team/milosz-blasiak.jpg"
+        alt="Miłosz Blasiak"
+        className="member-avatar"
+        loading="lazy"
+        placeholder="none"
+      />
+    )
+  }
+]
 
 const TeamSection = () => {
   const {t} = useTranslation()
@@ -22,47 +71,22 @@ const TeamSection = () => {
           <h2>{t`home.some_info`} <span className="h2-emoji">👋</span></h2>
         </div>
         <div className="members-ctn">
-          <Card
-            img={(
-              <StaticImage
-                src="../../../images/pawel-kocwa.jpg"
-                alt="Paweł Kocwa"
-                className="member-avatar"
-              />
-            )}
-            name={'PAWEŁ KOCWA'}
-            shortText={t`home.pawel_text`}
-            longText={t`home.pawel_long_text`}
-            linkedin={'https://www.linkedin.com/in/pawelkocwa/'}
-          />
-          <Card
-            img={(
-              <StaticImage
-                src="../../../images/milosz-blasiak.jpg"
-                alt="Miłosz Blasiak"
-                className="member-avatar"
-              />
-            )}
-            name={'MIŁOSZ BLASIAK'}
-            shortText={t`home.milosz_text`}
-            longText={t`home.milosz_long_text`}
-            linkedin={'https://www.linkedin.com/in/mi%C5%82osz-blasiak-b97613179'}
-            github={'https://github.com/mblasiak'}
-          />
-          <Card
-            img={(
-              <StaticImage
-                src="../../../images/piotr-kedra.jpeg"
-                alt="Piotr Kedra"
-                className="member-avatar"
-              />
-            )}
-            name={'PIOTR KĘDRA'}
-            shortText={t`home.piotr_text`}
-            longText={t`home.piotr_long_text`}
-            linkedin={'https://www.linkedin.com/in/pkedra/'}
-            github={'https://github.com/PiotrKedra'}
-          />
+          {
+            TEAM_MEMBERS
+              .sort( () => Math.random() - 0.5)
+              .map((member, key) => (
+                <Card
+                  key={key}
+                  img={member.pic}
+                  name={member.name}
+                  shortText={member.shortText}
+                  longText={member.longText}
+                  linkedin={member.linkedin}
+                  github={member.github}
+                />
+              )
+            )
+          }
         </div>
       </div>
     </section>
@@ -78,24 +102,26 @@ const Card = ({img, name, shortText, linkedin, github}) => {
         <div className="img-ctn">
           {img}
         </div>
-        <div className="member-socials">
-          <a href={linkedin} target="_blank" rel="noreferrer">
-            <FaLinkedinIn size="1.8rem"/>
-          </a>
-          {
-            github != null && (
-              <a href={github} target="_blank" rel="noreferrer">
-                <FaGithub style={{marginLeft: '1rem'}} size="1.8rem"/>
-              </a>
-            )
-          }
-        </div>
       </div>
       <h3>{name}</h3>
       <p>
-        {shortText}
+        {t(shortText)}
       </p>
-      <SecondaryBtn text={t`home.read_more`}/>
+      <div className="member-socials">
+        <a href={linkedin} target="_blank" rel="noreferrer">
+          <FaLinkedinIn size="1.5rem"/>
+          <span>{linkedin.replace('https://','')}</span>
+        </a>
+        {
+          github != null && (
+            <a href={github} target="_blank" rel="noreferrer">
+              <FaGithub size="1.5rem"/>
+              <span>{github.replace('https://','')}</span>
+            </a>
+          )
+        }
+      </div>
+      {/*<SecondaryBtn text={t`home.read_more`}/>*/}
     </div>
   );
 }
