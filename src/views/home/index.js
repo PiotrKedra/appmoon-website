@@ -14,7 +14,6 @@ import TeamSection from './components/team-section';
 import PartnersSection from './components/partners-section';
 import Layout from '../../components/layout/layout';
 
-
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
   const {t} = useTranslation()

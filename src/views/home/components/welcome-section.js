@@ -60,8 +60,8 @@ const WelcomeSection = () => {
           </div>
           <h1 id="homeTitle">
             <span id="homeTopTitle">{t`home.cta_title1`}</span>
-            <span id="homeMidTitle" className="nowrap-span">{t`home.cta_title2`}</span>
-            <span id="homeBottomTitle"> {t`home.cta_title3`}</span>
+            <span id="homeMidTitle" className="nowrap-span">{t`home.cta_title2` }</span>
+            <span id="homeBottomTitle">{t`home.cta_title3`}</span>
           </h1>
           <div id="homeTitleBtn" >
             <MainBtn text={t`home.contact_us`}/>

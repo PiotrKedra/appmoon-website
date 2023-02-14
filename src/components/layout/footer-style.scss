@@ -1,7 +1,6 @@
 @import '../../style/colors';
 
 .footer-section {
-  background-color: $codenauts_blue;
   padding-top: 6rem;
   padding-bottom: 4rem;
 
@@ -12,6 +11,10 @@
 
     .text-ctn {
       gap: 1rem;
+      align-items: center;
+      h2 {
+        text-transform: uppercase;
+      }
 
       .footer-contact-text {
         font-style: normal;
@@ -69,12 +72,14 @@
         .footer-contact-text {
           font-size: 44px;
         }
+        margin-bottom: 2rem;
       }
 
       .social-ctn {
         gap: 2rem;
         flex-direction: column-reverse;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
 
         svg {
           width: 1.5rem;
