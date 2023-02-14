@@ -1,16 +1,31 @@
 @import '../../../style/colors';
 
+
 .contact-section {
   margin-top: 10rem;
   margin-bottom: 0.5rem;
-  background-color: $codenauts_blue;
-  padding: 1rem;
   overflow: hidden;
 
   .inner-contact-section {
     width: 100%;
     height: 100%;
     background-color: $codenauts_black;
+
+    .contact-theme-ctn {
+      .theme1 {
+        position: absolute;
+        right: -50px;
+        bottom: 150px;
+        height: 250px;
+        width: 250px;
+      }
+
+      .theme2 {
+        position: absolute;
+        left: -50px;
+        top: 50px;
+      }
+    }
 
     .contact-form-ctn {
       display: flex;
@@ -25,6 +40,26 @@
 
         h2 {
           font-size: 36px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 976px) {
+    .inner-contact-section {
+      width: 100%;
+      height: 100%;
+      background-color: $codenauts_black;
+
+      .contact-theme-ctn {
+        .theme1 {
+          display: none;
+        }
+
+        .theme2 {
+          position: absolute;
+          left: -50px;
+          top: 50px;
         }
       }
     }

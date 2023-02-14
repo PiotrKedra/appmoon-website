@@ -93,11 +93,11 @@ const TeamSection = () => {
   );
 }
 
-const Card = ({img, name, shortText, linkedin, github}) => {
+const Card = ({img, name, shortText, linkedin, github, key}) => {
   const {t} = useTranslation()
 
   return (
-    <div className="text-ctn">
+    <div className="text-ctn" key={key}>
       <div className="top-ctn">
         <div className="img-ctn">
           {img}
