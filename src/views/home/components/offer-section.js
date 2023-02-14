@@ -4,6 +4,7 @@ import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import SecondaryBtn from '../../../components/buttons/secondary-btn';
 import { OrangeFullCircle } from '../../../components/theme/theme-component';
 import { gsap } from 'gsap';
+import {OFFER_SECTION} from "../../../components/home-page-sections";
 
 
 const OfferSection = () => {
@@ -43,7 +44,7 @@ const OfferSection = () => {
         <OrangeFullCircle className="theme"/>
       </div>
       <div className="ctn offer-ctn">
-        <div id="offerTextCtn" className="text-ctn">
+        <div id={OFFER_SECTION} className="text-ctn">
           <span className="section-label">{t`home.our_offer`}</span>
           <h2>{t`home.offer_title`}</h2>
           <p>{t`home.offer_description`}</p>

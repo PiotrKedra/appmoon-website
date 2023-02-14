@@ -4,6 +4,8 @@ import MainBtn from '../../../components/buttons/btn';
 import { BlueMatrixWithCircle } from '../../../components/theme/theme-component';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import scrollTo from "gatsby-plugin-smoothscroll";
+import {CONTACT_SECTION} from "../../../components/home-page-sections";
 
 
 const WelcomeSection = () => {
@@ -64,7 +66,7 @@ const WelcomeSection = () => {
             <span id="homeBottomTitle">{t`home.cta_title3`}</span>
           </h1>
           <div id="homeTitleBtn" >
-            <MainBtn text={t`home.contact_us`}/>
+            <MainBtn text={t`home.contact_us`} onClick={() => scrollTo(`#${CONTACT_SECTION}`)}/>
           </div>
           <BlueMatrixWithCircle id="welcomeTheme" className="theme"/>
         </div>

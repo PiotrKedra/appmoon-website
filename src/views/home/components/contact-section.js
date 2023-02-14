@@ -3,6 +3,7 @@ import ContactForm from '../../../components/contact-form'
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import '../style/contact-style.scss'
 import { gsap } from 'gsap'
+import {CONTACT_SECTION} from "../../../components/home-page-sections";
 
 const ContactSection = () => {
   const {t} = useTranslation()
@@ -20,7 +21,7 @@ const ContactSection = () => {
   }, [])
 
   return (
-    <section className="contact-section">
+    <section id={CONTACT_SECTION} className="contact-section">
       <div className="section-ctn inner-contact-section">
         <div className="ctn contact-form-ctn">
           <div className="text-ctn">

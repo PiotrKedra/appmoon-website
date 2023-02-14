@@ -1,5 +1,5 @@
 const START_SECTION = "start"
-const OFFER_SECTION = "offer"
+const OFFER_SECTION = "offerTextCtn"
 const ABOUT_SECTION = "about"
 const CONTACT_SECTION = "contact"
 
