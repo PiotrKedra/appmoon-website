@@ -58,6 +58,7 @@ const TEAM_MEMBERS = [
 
 const TeamSection = () => {
   const {t} = useTranslation()
+  const [members] = React.useState(TEAM_MEMBERS.sort( () => Math.random() - 0.5))
 
   return (
     <section id={ABOUT_SECTION}>
@@ -72,9 +73,7 @@ const TeamSection = () => {
         </div>
         <div className="members-ctn">
           {
-            TEAM_MEMBERS
-              .sort( () => Math.random() - 0.5)
-              .map((member, key) => (
+            members.map((member, key) => (
                 <Card
                   key={key}
                   img={member.pic}
