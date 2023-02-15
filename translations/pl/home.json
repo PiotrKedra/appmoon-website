@@ -65,7 +65,9 @@
   "home.steps_testing_text": "Testowanie jest nierozłącznym etapem każdego projektu, przebiegającym bardzo różnie, w zależności od typu projektu. W tej fazie upewniamy się, że aplikacja spełnia Twoje wszelkie wymagania i oczekiwania.",
   "home.steps_support_title": "Wsparcie",
   "home.steps_support_text": "Etap ten nie jest niezbędną częścią realizowanego projektu. Jeśli jednak zdecydujesz się na to abyśmy kontynuowali współpracę po jego zrealizowaniu, możemy zapewnić wsparcie zgodnie z Twoimi oczekiwaniami. Wsparcie to może polegać na zapewnieniu utrzymania projektu, bądź jego późniejszym rozwój dla aplikacji oraz systemów wbudowanych.",
-  "home.partners_subtitle": "Klienci",
-  "home.partners_title": "Nasi Klienci",
+  "home.clients_subtitle": "Klienci",
+  "home.clients_title": "Nasi Klienci",
+  "home.partners_subtitle": "Partnerzy",
+  "home.partners_title": "Nasi partnerzy",
   "home.contact_us_footer": "Skontaktuj_się"
 }

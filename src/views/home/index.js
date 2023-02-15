@@ -13,6 +13,7 @@ import ContactSection from './components/contact-section';
 import TeamSection from './components/team-section';
 import PartnersSection from './components/partners-section';
 import Layout from '../../components/layout/layout';
+import ClientsSection from "./components/clients-section";
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -34,6 +35,8 @@ const Home = () => {
       <StepsSection/>
 
       <TeamSection/>
+
+      <ClientsSection/>
 
       <PartnersSection/>
 

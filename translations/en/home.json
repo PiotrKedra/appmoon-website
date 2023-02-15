@@ -67,7 +67,9 @@
   "home.steps_testing_text": "Testing is an indispensable phase of any project, running very differently depending on the type of project. In this phase, we make sure that the application meets all your requirements and expectations.",
   "home.steps_support_title": "Support",
   "home.steps_support_text": "This stage is not a necessary part of the ongoing project. However, if you decide for us to continue the cooperation after its realisation, we can provide support according to your expectations. This support may consist of ensuring the maintenance of the project or its subsequent development for applications and embedded systems.",
-  "home.partners_subtitle": "Clients",
-  "home.partners_title": "Our Clients",
+  "home.clients_subtitle": "Clients",
+  "home.clients_title": "Our Clients",
+  "home.partners_subtitle": "Partners",
+  "home.partners_title": "Our Partners",
   "home.contact_us_footer": "Contact_us"
 }
