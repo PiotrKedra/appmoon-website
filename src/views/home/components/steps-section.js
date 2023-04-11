@@ -18,17 +18,17 @@ const STEPS = [
   {
     nr: "03",
     title: "home.steps_implementation_title",
-    text: "home.steps_meeting_text"
+    text: "home.steps_implementation_text"
   },
   {
     nr: "04",
     title: "home.steps_testing_title",
-    text: "home.steps_meeting_text"
+    text: "home.steps_testing_text"
   },
   {
     nr: "05",
     title: "home.steps_support_title",
-    text: "home.steps_meeting_text"
+    text: "home.steps_support_text"
   },
 ]
 

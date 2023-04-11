@@ -42,7 +42,7 @@ const TEAM_MEMBERS = [
     name: 'Miłosz Blasiak',
     shortText: 'home.milosz_text',
     longText: 'home.milosz_long_text',
-    linkedin: 'https://linkedin.com/in/miłosz-blasiak-b97613179',
+    linkedin: 'https://linkedin.com/in/milosz-blasiak',
     github: 'https://github.com/mblasiak',
     pic: (
       <StaticImage
