@@ -5,7 +5,7 @@ import './theme-style.scss'
 const BlueMatrix = ({className}) => (
   <StaticImage
     src="../../images/theme/matrix-theme.png"
-    alt="Theme component"
+    alt=""
     className={`matrix ${className}`}
     placeholder="none"
     loading="lazy"
@@ -15,7 +15,7 @@ const BlueMatrix = ({className}) => (
 const OrangeMatrix = ({className}) => (
   <StaticImage
     src="../../images/theme/matrix-orange-theme.png"
-    alt="Theme component"
+    alt=""
     className={`matrix ${className}`}
     placeholder="none"
     loading="lazy"
