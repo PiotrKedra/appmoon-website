@@ -71,5 +71,12 @@
   "home.clients_title": "Our Clients",
   "home.partners_subtitle": "Partners",
   "home.partners_title": "Our Partners",
-  "home.contact_us_footer": "Contact_us"
+  "home.contact_us_footer": "Contact_us",
+  "home.policy_agreement_1": "By sending us a message you accept our ",
+  "home.policy_agreement_2": "privacy policy",
+  "home.privacy_policy": "Privacy Policy",
+  "home.company_data": "Company's information",
+  "home.codenauts_spzoo": "Codenauts sp. z o.o.",
+  "home.codenauts_address": "31-545 Krakww, 43 Mogilska Street",
+  "home.codenauts_nip_krs": "VAT number: 6751780349 • KRS: 0001028763"
 }

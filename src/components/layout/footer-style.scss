@@ -9,9 +9,15 @@
     flex-direction: column;
     gap: 3rem;
 
+    .top-ctn {
+      display: flex;
+      flex-direction: row;
+      column-gap: 6rem;
+    }
+
     .text-ctn {
       gap: 1rem;
-      align-items: center;
+      align-items: start;
       h2 {
         text-transform: uppercase;
       }
@@ -29,6 +35,13 @@
         align-items: center;
         gap: 1rem;
         text-decoration: none;
+      }
+    }
+
+    .company-data {
+      p {
+        font-size: 14px;
+        opacity: 0.9;
       }
     }
 
@@ -67,6 +80,10 @@
   .footer-section {
     .ctn {
       gap: 2rem;
+
+      .top-ctn {
+        flex-direction: column;
+      }
 
       .text-ctn {
         .footer-contact-text {

@@ -73,6 +73,11 @@
     transition: all 0.1s ease-in-out;
   }
 
+  .policy-agreement-text {
+    font-size: 12px;
+    margin: 0.5rem 0;
+  }
+
   @media (max-width: 380px) {
     button {
       padding: 0.6rem 1.5rem;

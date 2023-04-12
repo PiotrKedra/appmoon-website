@@ -69,5 +69,12 @@
   "home.clients_title": "Nasi Klienci",
   "home.partners_subtitle": "Partnerzy",
   "home.partners_title": "Nasi partnerzy",
-  "home.contact_us_footer": "Skontaktuj_się"
+  "home.contact_us_footer": "Skontaktuj_się",
+  "home.policy_agreement_1": "Wysyłając do nas wiadomść akceptujesz naszą ",
+  "home.policy_agreement_2": "politykę prywatności",
+  "home.privacy_policy": "Polityka Prywatności",
+  "home.company_data": "Dane firmy",
+  "home.codenauts_spzoo": "Codenauts sp. z o.o.",
+  "home.codenauts_address": "31-545 Kraków, ul. Mogilska 43",
+  "home.codenauts_nip_krs": "NIP: 6751780349 • KRS: 0001028763"
 }

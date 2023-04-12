@@ -3,6 +3,7 @@ import { BsArrowUpRightCircle } from 'react-icons/bs'
 import emailjs from "emailjs-com"
 import { useTranslation } from 'gatsby-plugin-react-i18next'
 import './contact-form-style.scss'
+import { withPrefix } from "gatsby"
 
 const ContactForm = () => {
   const {t} = useTranslation()
@@ -128,6 +129,7 @@ const ContactForm = () => {
         <p className="error-msg" style={isMessageValid ? null : {opacity: 1}}>
           {t`home.empty_message`} 😅
         </p>
+        <p className="policy-agreement-text">{t`home.policy_agreement_1`} <a href={withPrefix('privacy-policy.pdf')} target="_blank" rel="noreferrer">{t`home.policy_agreement_2`}</a>.</p>
         <button type="submit" disabled={submitted} className="secondary-btn-ctn">
           <p>{t`home.send`}</p>
           <BsArrowUpRightCircle size={20}/>
