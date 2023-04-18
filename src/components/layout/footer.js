@@ -1,10 +1,9 @@
 import React from 'react'
 import './footer-style.scss'
 import { GoMail } from 'react-icons/go';
-import {BsGithub, BsFacebook, BsLinkedin} from 'react-icons/bs';
+import {BsGithub, BsFacebook, BsLinkedin, BsTelephone} from 'react-icons/bs';
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import {withPrefix} from "gatsby";
-import {TbPhone} from "react-icons/all";
 
 const Footer = () => {
   const {t} = useTranslation()
@@ -20,7 +19,7 @@ const Footer = () => {
                 <p>contact@codenauts.io</p>
               </a>
               <a href="tel:+48453140959">
-                <TbPhone size="1.8rem"/>
+                <BsTelephone size="1.8rem"/>
                 <p>+48 453 140 959</p>
               </a>
             </div>
