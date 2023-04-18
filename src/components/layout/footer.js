@@ -4,6 +4,7 @@ import { GoMail } from 'react-icons/go';
 import {BsGithub, BsFacebook, BsLinkedin} from 'react-icons/bs';
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import {withPrefix} from "gatsby";
+import {TbPhone} from "react-icons/tb";
 
 const Footer = () => {
   const {t} = useTranslation()
@@ -17,6 +18,10 @@ const Footer = () => {
               <a href="mailto:contact@codenauts.io">
                 <GoMail size="1.8rem"/>
                 <p>contact@codenauts.io</p>
+              </a>
+              <a href="tel:+48453140959">
+                <TbPhone size="1.8rem"/>
+                <p>+48 453 140 959</p>
               </a>
             </div>
             <div className="text-ctn company-data">
