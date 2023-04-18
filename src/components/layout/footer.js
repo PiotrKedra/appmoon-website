@@ -4,7 +4,7 @@ import { GoMail } from 'react-icons/go';
 import {BsGithub, BsFacebook, BsLinkedin} from 'react-icons/bs';
 import {useTranslation} from "gatsby-plugin-react-i18next";
 import {withPrefix} from "gatsby";
-import {TbPhone} from "react-icons/tb";
+import {TbPhone} from "react-icons/all";
 
 const Footer = () => {
   const {t} = useTranslation()
