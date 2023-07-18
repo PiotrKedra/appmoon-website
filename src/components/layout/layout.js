@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Menu from './menu';
 import Footer from './footer';
-import { withPrefix } from "gatsby"
+import {graphql, useStaticQuery} from "gatsby"
 import { I18nextContext } from 'gatsby-plugin-react-i18next';
 
 
@@ -17,6 +17,29 @@ const Layout = ({
   isFooter = true,
 }) => {
   const {language} = React.useContext(I18nextContext);
+
+  const { site, ogImageDefault } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+            siteUrl
+          }
+        }
+        ogImageDefault: file(relativePath: { eq: "codenauts-banner.png" }) {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED, height: 800, width: 800)
+          }
+        }
+      }
+    `
+  )
+
+  const defaultImageSrc = ogImageDefault.childImageSharp.gatsbyImageData.images.fallback.src
+
 
   return (
     <main className={`main-ctn ${mainClass}`}>
@@ -39,7 +62,9 @@ const Layout = ({
           },
           {
             property: `og:image`,
-            content: ogImage === undefined ? withPrefix('/images/codenauts-banner.png') : ogImage
+            content: ogImage === undefined
+              ? constructUrl(site.siteMetadata?.siteUrl, defaultImageSrc)
+              : ogImage
           },
           {
             property: 'og:type',
@@ -64,6 +89,11 @@ const Layout = ({
 
     </main>
   );
+}
+
+function constructUrl(baseUrl, path) {
+  if (baseUrl === "" || path === "") return "";
+  return `${baseUrl}${path}`;
 }
 
 export default Layout;
