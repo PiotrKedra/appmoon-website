@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@fontsource/jetbrains-mono": "^4.5.3",
+    "@sendgrid/mail": "^7.7.0",
     "dotenv": "^16.0.0",
     "emailjs-com": "^3.2.0",
     "gatsby": "^4.7.2",
@@ -39,5 +40,8 @@
     "react-i18next": "^11.16.2",
     "react-icons": "^4.3.1",
     "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "@netlify/plugin-gatsby": "^3.7.2"
   }
 }
